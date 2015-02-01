@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WM_Project.WebService.WMOrderService" CodeBehind="WMOrderService.svc.cs" %>

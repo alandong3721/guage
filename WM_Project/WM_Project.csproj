@@ -1,0 +1,3233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BF33B1F-17CB-4373-9C76-460EB6198304}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WM_Project</RootNamespace>
+    <AssemblyName>WM_Project</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="chncharinfo">
+      <HintPath>F:\ASP\2015-01-10-2\PostNL\bin\chncharinfo.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>C:\Users\wang\Desktop\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsian">
+      <HintPath>C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\iTextAsian.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsianCmaps">
+      <HintPath>C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\iTextAsianCmaps.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>C:\Users\wang\Desktop\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="image\images\collect_plus_logo.png" />
+    <Content Include="image\image\logo-collectplus.png" />
+    <Content Include="image\image\logo-ukmail.png" />
+    <Content Include="image\image\logo-postnl.png" />
+    <Content Include="manage-system\auto-order-detail-info.aspx" />
+    <Content Include="manage-system\check-order-detail-info.aspx" />
+    <Content Include="manage-system\check-payback-apply.aspx" />
+    <Content Include="manage-system\frame\check-interface-order-by-time.aspx" />
+    <Content Include="manage-system\frame\check-local-order-by-name.aspx" />
+    <Content Include="manage-system\frame\check-local-order-by-number.aspx" />
+    <Content Include="manage-system\frame\check-local-order-by-time.aspx" />
+    <Content Include="manage-system\frame\ems-last-order-number-check.aspx" />
+    <Content Include="manage-system\frame\import-ems-order-number.aspx" />
+    <Content Include="manage-system\frame\import-ems-track-info.aspx" />
+    <Content Include="manage-system\super-admin-frame\charge-by-card.aspx" />
+    <Content Include="manage-system\super-admin-frame\user-account-balance-check.aspx" />
+    <Content Include="manage-system\super-admin-frame\user-account-trans-info.aspx" />
+    <Content Include="manage-system\user-debt-record-info.aspx" />
+    <Content Include="manage-system\user-detail-info.aspx" />
+    <Content Include="MasterPage\reception-stage\home-old.Master" />
+    <None Include="Service References\ShipServiceForApp\ShipServiceDefinitions.wsdl" />
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.CancelShipmentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.CreateManifestReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.CreateShipmentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.FindReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.PrintDocumentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.PrintLabelReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.PrintManifestReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipServiceForApp\WM_Project.ShipServiceForApp.ReturnShipmentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\configuration91.svcinfo" />
+    <None Include="Service References\ShipService\configuration.svcinfo" />
+    <None Include="Service References\ShipService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ShipServiceForApp\configuration91.svcinfo" />
+    <None Include="Service References\ShipServiceForApp\configuration.svcinfo" />
+    <None Include="Service References\ShipServiceForApp\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="views\charge-failed.aspx" />
+    <Content Include="views\charge-success.aspx" />
+    <Content Include="views\exception\order-number-error.aspx" />
+    <Content Include="views\inter-express\batch-import.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="image\images\11.png" />
+    <Content Include="image\images\12.png" />
+    <Content Include="image\images\13.png" />
+    <Content Include="image\images\add-one-line.png" />
+    <Content Include="image\images\add_new_address.gif" />
+    <Content Include="image\images\background.jpg" />
+    <Content Include="image\images\btn-check-price.png" />
+    <Content Include="image\images\btn-get-code.png" />
+    <Content Include="image\images\btn-regist.png" />
+    <Content Include="image\images\btn-reset-password.png" />
+    <Content Include="image\images\btn-track-parcel.png" />
+    <Content Include="image\images\btn-user-forget-password.png" />
+    <Content Include="image\images\btn-user-login.png" />
+    <Content Include="image\images\btn-user-regist.png" />
+    <Content Include="image\images\button_custom3-zh-DarkOrange.gif" />
+    <Content Include="image\images\button_custom5-zh-4-Green.gif" />
+    <Content Include="image\images\buy-now-btn.jpg" />
+    <Content Include="image\images\buy-now-next-btn.jpg" />
+    <Content Include="image\images\circle-minus.png" />
+    <Content Include="image\images\circle-plus.png" />
+    <Content Include="image\images\contact_waiter.png" />
+    <Content Include="image\images\contact_waitress.gif" />
+    <Content Include="image\images\copy.gif" />
+    <Content Include="image\images\del.jpg" />
+    <Content Include="image\images\delete-one-line.png" />
+    <Content Include="image\images\EMSLOGO2.png" />
+    <Content Include="image\images\erweima.png" />
+    <Content Include="image\images\fast-estimate-freight.jpg" />
+    <Content Include="image\images\fast-estimate-price.jpg" />
+    <Content Include="image\images\from-to.jpg" />
+    <Content Include="image\images\header.jpg" />
+    <Content Include="image\images\hnysjy.jpg" />
+    <Content Include="image\images\login.jpg" />
+    <Content Include="image\images\member-login.jpg" />
+    <Content Include="image\images\member-regist.jpg" />
+    <Content Include="image\images\myaccount-address-info-management.jpg" />
+    <Content Include="image\images\myaccount-alter-btn.png" />
+    <Content Include="image\images\myaccount-change-password-btn.png" />
+    <Content Include="image\images\myaccount-change-password.jpg" />
+    <Content Include="image\images\myaccount-download-btn.png" />
+    <Content Include="image\images\myaccount-navigate-back.jpg" />
+    <Content Include="image\images\myaccount-order-management.jpg" />
+    <Content Include="image\images\myaccount-person-info-management.jpg" />
+    <Content Include="image\images\myaccount-person-info-management0.jpg" />
+    <Content Include="image\images\myaccount-person-info.jpg" />
+    <Content Include="image\images\myaccount-query-all-btn.png" />
+    <Content Include="image\images\myaccount-query-btn.png" />
+    <Content Include="image\images\navigate01.jpg" />
+    <Content Include="image\images\notice.png" />
+    <Content Include="image\images\pop-btn-login.png" />
+    <Content Include="image\images\pop-login.jpg" />
+    <Content Include="image\images\reset-password.jpg" />
+    <Content Include="image\images\submit.gif" />
+    <Content Include="image\images\track-your-parcel.jpg" />
+    <Content Include="image\images\user-forget-password1.png" />
+    <Content Include="image\image\alipay-small.png" />
+    <Content Include="image\image\back.jpg" />
+    <Content Include="image\image\background1.png" />
+    <Content Include="image\image\background2.png" />
+    <Content Include="image\image\BannerLuggagespecial.jpg" />
+    <Content Include="image\image\BannerMilkpower.jpg" />
+    <Content Include="image\image\body-background.png" />
+    <Content Include="image\image\circle-plus.png" />
+    <Content Include="image\image\citylink-small.png" />
+    <Content Include="image\image\citysprint-small.png" />
+    <Content Include="image\image\contact_waiter.png" />
+    <Content Include="image\image\ems-direct-flow-chart.jpg" />
+    <Content Include="image\image\ems-logisticsprocess.png" />
+    <Content Include="image\image\ems-official-website-track.png" />
+    <Content Include="image\image\ems-order-pdf.png" />
+    <Content Include="image\image\fedex-small.png" />
+    <Content Include="image\image\free-for-first-package.jpg" />
+    <Content Include="image\image\free-package-from-china.jpg" />
+    <Content Include="image\image\free-package-from-uk.jpg" />
+    <Content Include="image\image\how-to-get-red-packet.png" />
+    <Content Include="image\image\how-to-receive-red-packet.png" />
+    <Content Include="image\image\how-to-reward-points.png" />
+    <Content Include="image\image\how-to-use-red-packet.png" />
+    <Content Include="image\image\logo-bpost.png" />
+    <Content Include="image\image\logo-ems.png" />
+    <Content Include="image\image\logo-parcelforce-large.png" />
+    <Content Include="image\image\lowest-price.png" />
+    <Content Include="image\image\online-ab.png" />
+    <Content Include="image\image\online-amazon.png" />
+    <Content Include="image\image\online-bank-fashion.png" />
+    <Content Include="image\image\online-beautyexpert.png" />
+    <Content Include="image\image\online-boots.png" />
+    <Content Include="image\image\online-btw.png" />
+    <Content Include="image\image\online-clarks.png" />
+    <Content Include="image\image\online-ebay.png" />
+    <Content Include="image\image\online-hb.png" />
+    <Content Include="image\image\online-kiddicare.png" />
+    <Content Include="image\image\online-mr-shoes.png" />
+    <Content Include="image\image\online-my-bag.png" />
+    <Content Include="image\image\online-neals-yard.png" />
+    <Content Include="image\image\online-reebok.png" />
+    <Content Include="image\image\online-sainsnurys.png" />
+    <Content Include="image\image\online-shop-logo.png" />
+    <Content Include="image\image\online-supperdrug.png" />
+    <Content Include="image\image\online-tesco.png" />
+    <Content Include="image\image\online-the-body-shop.png" />
+    <Content Include="image\image\online-ugg.png" />
+    <Content Include="image\image\online-vita.png" />
+    <Content Include="image\image\package-free.jpg" />
+    <Content Include="image\image\palletforce-small.png" />
+    <Content Include="image\image\parcelforce-small.png" />
+    <Content Include="image\image\promp-reward-points.png" />
+    <Content Include="image\image\quick-quote-top.gif" />
+    <Content Include="image\image\seafreight.jpg" />
+    <Content Include="image\image\tnt-small.png" />
+    <Content Include="image\image\track-your-parcel-button.gif" />
+    <Content Include="image\image\track-your-parcel.gif" />
+    <Content Include="image\image\ts.png" />
+    <Content Include="image\image\wechat.jpg" />
+    <Content Include="image\image\wm-head-title.jpg" />
+    <Content Include="image\image\yodel-small.png" />
+    <Content Include="image\wsshimages\51parcel-large.png" />
+    <Content Include="image\wsshimages\anpost-large.png" />
+    <Content Include="image\wsshimages\box_with_2milk.png" />
+    <Content Include="image\wsshimages\box_with_4milk.png" />
+    <Content Include="image\wsshimages\box_with_6milk.png" />
+    <Content Include="image\wsshimages\bpost-large.png" />
+    <Content Include="image\wsshimages\button_add.png" />
+    <Content Include="image\wsshimages\button_remove.png" />
+    <Content Include="image\wsshimages\h-line.gif" />
+    <Content Include="image\wsshimages\imglvl1.jpg" />
+    <Content Include="image\wsshimages\imglvl2.jpg" />
+    <Content Include="image\wsshimages\imglvl3.jpg" />
+    <Content Include="image\wsshimages\Int-Quote-box-result-box-bg.gif" />
+    <Content Include="image\wsshimages\int-quote-buy.gif" />
+    <Content Include="image\wsshimages\Int-Quote-Price-Box.gif" />
+    <Content Include="image\wsshimages\luggagebox.jpg" />
+    <Content Include="image\wsshimages\milkpowerLogo.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_1001.png" />
+    <Content Include="image\wsshimages\Product_image_list_1002.png" />
+    <Content Include="image\wsshimages\Product_image_list_1003.png" />
+    <Content Include="image\wsshimages\Product_image_list_1004.png" />
+    <Content Include="image\wsshimages\Product_image_list_1005.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_1006.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_101.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_102.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_103.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_104.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_105.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_106.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_107.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_108.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_109.jpg" />
+    <Content Include="image\wsshimages\Product_image_list_110.jpg" />
+    <Content Include="image\wsshimages\S3.jpg" />
+    <Content Include="image\wsshimages\smallgray.gif" />
+    <Content Include="image\wsshimages\ucs-large.png" />
+    <Content Include="index.aspx" />
+    <Content Include="javascripts\bootstrap.js" />
+    <Content Include="javascripts\jquery-1.11.1.js" />
+    <Content Include="javascripts\jquery-1.6.1.min.js" />
+    <Content Include="javascripts\respond.js" />
+    <Content Include="manage-system\error-page.aspx" />
+    <Content Include="manage-system\frame\check-order-by-name.aspx" />
+    <Content Include="manage-system\frame\check-order-by-number.aspx" />
+    <Content Include="manage-system\frame\check-excel-order-by-time.aspx" />
+    <Content Include="manage-system\frame\check-user-info.aspx" />
+    <Content Include="manage-system\manager-account-management.aspx" />
+    <Content Include="manage-system\manager-frame\change-person-info.aspx" />
+    <Content Include="manage-system\manager-frame\manager-change-password.aspx" />
+    <Content Include="manage-system\manager-home.aspx" />
+    <Content Include="manage-system\manager-login.aspx" />
+    <Content Include="manage-system\manager-order-management.aspx" />
+    <Content Include="manage-system\manager-staff-management.aspx" />
+    <Content Include="manage-system\order-detail-info.aspx" />
+    <Content Include="manage-system\staff-account-management.aspx" />
+    <Content Include="manage-system\staff-frame\change-password.aspx" />
+    <Content Include="manage-system\staff-frame\change-person-info.aspx" />
+    <Content Include="manage-system\staff-frame\repay-apply.aspx" />
+    <Content Include="manage-system\staff-home.aspx" />
+    <Content Include="manage-system\staff-order-management.aspx" />
+    <Content Include="manage-system\super-admin-account.aspx" />
+    <Content Include="manage-system\super-admin-finance-management.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-ems.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-pf-gpr-collection.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-pf-gpr-delivery.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-collection.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-depot.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-pol.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-trailer.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-rate-type-postnl.aspx" />
+    <Content Include="manage-system\super-admin-frame\add-staff.aspx" />
+    <Content Include="manage-system\super-admin-frame\admin-change-password.aspx" />
+    <Content Include="manage-system\super-admin-frame\charge-for-user.aspx" />
+    <Content Include="manage-system\super-admin-frame\charge-repay-record.aspx" />
+    <Content Include="manage-system\super-admin-frame\check-all-user-rate-type.aspx" />
+    <Content Include="manage-system\super-admin-frame\check-debt-user.aspx" />
+    <Content Include="manage-system\super-admin-frame\check-staff.aspx" />
+    <Content Include="manage-system\super-admin-frame\ems-money.aspx" />
+    <Content Include="manage-system\super-admin-frame\payback-apply-info.aspx" />
+    <Content Include="manage-system\super-admin-frame\payback-apply-unpass.aspx" />
+    <Content Include="manage-system\super-admin-frame\paybackimage\text.png" />
+    <Content Include="manage-system\super-admin-frame\pf-money.aspx" />
+    <Content Include="manage-system\super-admin-frame\repayment-for-user.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-local-pick-up-rate.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-ems.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-pf-gpr-collection.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-pf-gpr-delivery.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-pf-ipe-collection.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-pf-ipe-depot.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-pf-ipe-pol.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-pf-ipe-trailer.aspx" />
+    <Content Include="manage-system\super-admin-frame\set-rate-postnl.aspx" />
+    <Content Include="manage-system\super-admin-home.aspx" />
+    <Content Include="manage-system\super-admin-order-management.aspx" />
+    <Content Include="manage-system\super-admin-staff-management.aspx" />
+    <Content Include="script\Calendar3.js" />
+    <Content Include="script\colorbox\jquery.colorbox-min.js" />
+    <Content Include="script\colorbox\jquery.colorbox.js" />
+    <Content Include="script\cookie\.gitignore" />
+    <Content Include="script\cookie\Gruntfile.js" />
+    <Content Include="script\cookie\jquery.cookie.js" />
+    <Content Include="script\cookie\MIT-LICENSE.txt" />
+    <Content Include="script\cookie\test\index.html" />
+    <Content Include="script\cookie\test\malformed_cookie.html" />
+    <Content Include="script\cookie\test\server.js" />
+    <Content Include="script\cookie\test\tests.js" />
+    <Content Include="script\demo.js" />
+    <Content Include="script\jq.scrollLoading.js" />
+    <Content Include="script\jQselect.js" />
+    <Content Include="script\jquery-1.11.1.js" />
+    <Content Include="script\jquery-1.4.1.js" />
+    <Content Include="script\jquery-1.4.2.min.js" />
+    <Content Include="script\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.gitattributes" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.gitignore" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\build\release.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\ajaxSubmit-integration-demo.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\captcha.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\images\button.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\style.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\css\cmxform.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\css\cmxformTemplate.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\css\core.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\css\reset.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\css\screen.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\custom-messages-data-demo.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\custom-methods-demo.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\dynamic-totals.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\errorcontainer-demo.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\errors-within-labels.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\file_input.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\images\bg.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\images\checked.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\images\cmxform-divider.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\images\cmxform-fieldset.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\images\loading.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\images\unchecked.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\jquerymobile.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\login\images\bg.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\login\images\header1.jpg" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\login\images\page.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\login\images\required_star.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\login\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\login\screen.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\backRequiredGray.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\back_green-fade.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\back_nav_blue.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\blank.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\button-submit.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\favicon.ico" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\help.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\left-nav-callout-long.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\login-sprite.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\logo_marketo.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\sf.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\step1-24.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\step2-24.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\step3-24.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\tab-sprite.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\tab_green.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\time.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\toggle.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\images\warning.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\jquery.maskedinput.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\mktSignup.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\step2.htm" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\marketo\stylesheet.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\milk\bg.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\milk\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\milk\left_white.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\milk\milk.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\milk\milk.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\milk\right_white.png" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\multipart\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\multipart\style.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\radio-checkbox-select-demo.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\requirejs\app.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\requirejs\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\site-demos.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\themerollered.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\tinymce\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\tinymce\themes\simple\editor_template.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\tinymce\themes\simple\img\icons.gif" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\tinymce\themes\simple\langs\en.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\tinymce\themes\simple\skins\default\ui.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\tinymce\tiny_mce.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\dist\additional-methods.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\dist\additional-methods.min.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\dist\jquery.validate.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\dist\jquery.validate.min.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\Gruntfile.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery-1.11.1.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery-1.6.4.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery-1.7.2.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery-1.8.3.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery-1.9.1.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery.form.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery.mockjax.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\jquery.simulate.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\lib\require.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\accept.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\additional.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\alphanumeric.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\bankaccountNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\bankorgiroaccountNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\bic.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\cifES.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\creditcardtypes.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\currency.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\dateFA.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\dateITA.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\dateNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\extension.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\giroaccountNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\iban.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\integer.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\ipv4.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\ipv6.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\lettersonly.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\letterswithbasicpunc.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\mobileNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\mobileUK.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\nieES.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\nifES.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\nowhitespace.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\pattern.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\phoneNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\phonesUK.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\phoneUK.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\phoneUS.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\postalCodeCA.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\postalcodeIT.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\postalcodeNL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\postcodeUK.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\require_from_group.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\skip_or_fill_minimum.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\statesUS.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\strippedminlength.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\time.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\time12h.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\url2.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\vinUS.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\zipcodeUS.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\additional\ziprange.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\ajax.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\core.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\delegate.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ar.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_bg.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ca.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_cs.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_da.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_de.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_el.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_es.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_es_AR.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_et.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_eu.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_fa.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_fi.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_fr.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_gl.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_he.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_hr.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_hu.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_id.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_is.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_it.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ja.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ka.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_kk.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ko.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_lt.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_lv.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_my.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_nl.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_no.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_pl.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_pt_BR.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_pt_PT.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ro.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_ru.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_si.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_sk.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_sl.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_sr.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_sr_lat.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_sv.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_th.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_tj.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_tr.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_uk.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_vi.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_zh.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\messages_zh_TW.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\methods_de.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\methods_es_CL.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\methods_fi.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\methods_nl.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\src\localization\methods_pt.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\aria.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\error-placement.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\index.html" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\messages.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\methods.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\qunit\qunit.css" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\qunit\qunit.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\rules.js" />
+    <Content Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\test.js" />
+    <Content Include="script\jquery.anythingslider.js" />
+    <Content Include="script\jquery.bgiframe.min.js" />
+    <Content Include="script\jquery.cluetip.js" />
+    <Content Include="script\jquery.easing.1.2.js" />
+    <Content Include="script\jquery.hoverIntent.js" />
+    <Content Include="script\jquery.validate.js" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\external\jquery\jquery.js" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-icons_222222_256x240.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\index.html" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.css" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.js" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.min.css" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.min.js" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.structure.css" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.theme.css" />
+    <Content Include="script\jquery_ui\jquery-ui-1.11.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="script\jq_scroll.js" />
+    <Content Include="script\juery_layout\jquery.layout-latest.js" />
+    <Content Include="script\juery_layout\layout-default-latest.css" />
+    <Content Include="script\layer-v1.8.5\layer\extend\layer.ext.js" />
+    <Content Include="script\layer-v1.8.5\layer\layer.min.js" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\icon_ext.png" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\textbg.png" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\xubox_ico0.png" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\xubox_loading0.gif" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\xubox_loading1.gif" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\xubox_loading2.gif" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\xubox_loading3.gif" />
+    <Content Include="script\layer-v1.8.5\layer\skin\default\xubox_title0.png" />
+    <Content Include="script\layer-v1.8.5\layer\skin\layer.css" />
+    <Content Include="script\layer-v1.8.5\layer\skin\layer.ext.css" />
+    <Content Include="script\layer.min.js" />
+    <Content Include="script\lightbox\jquery-1.3.2.min.js" />
+    <Content Include="script\lightbox\jquery.color.js" />
+    <Content Include="script\lightbox\jquery.color.min.js" />
+    <Content Include="script\lightbox\jquery.lightbox.js" />
+    <Content Include="script\lightbox\jquery.lightbox.min.js" />
+    <Content Include="script\masterhome.js" />
+    <Content Include="script\messegebox\jquery.dragndrop.js" />
+    <Content Include="script\messegebox\jquery.dragndrop.min.js" />
+    <Content Include="script\messegebox\jquery.msgbox.js" />
+    <Content Include="script\messegebox\jquery.msgbox.min.js" />
+    <Content Include="script\scrolltopcontrol.js" />
+    <Content Include="script\test.js" />
+    <Content Include="MasterPage\back-stage\admin.Master" />
+    <Content Include="MasterPage\back-stage\home.Master" />
+    <Content Include="MasterPage\back-stage\manager.Master" />
+    <Content Include="MasterPage\back-stage\staff.Master" />
+    <None Include="manage-system\super-admin-frame\paybackimage\yangwang20141226234142collection.doc" />
+    <None Include="Service References\BarcodeService\BarcodeWebService.wsdl" />
+    <None Include="Service References\BarcodeService\item.wsdl" />
+    <None Include="Service References\BarcodeService\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BarcodeService\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BarcodeService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BarcodeService\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BarcodeService\WM_Project.BarcodeService.GenerateBarcodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LabelTest1\configuration91.svcinfo" />
+    <None Include="Service References\LabelTest1\configuration.svcinfo" />
+    <None Include="Service References\LabelTest1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BarcodeService\configuration91.svcinfo" />
+    <None Include="Service References\BarcodeService\configuration.svcinfo" />
+    <None Include="Service References\BarcodeService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="stylesheets\bootstrap-ie7-master\css\bootstrap-ie7.css" />
+    <Content Include="stylesheets\bootstrap-responsive.css" />
+    <Content Include="stylesheets\bootstrap-theme.css" />
+    <Content Include="stylesheets\bootstrap.css" />
+    <Content Include="stylesheets\respond.js" />
+    <Content Include="stylesheets\style.css" />
+    <Content Include="style\home.css" />
+    <Content Include="style\index.css" />
+    <Content Include="style\wssh.css" />
+    <Content Include="test.aspx" />
+    <Content Include="views\activity-area\ally-plan.aspx" />
+    <Content Include="views\activity-area\custom-point.aspx" />
+    <Content Include="views\activity-area\custom-red-packet.aspx" />
+    <Content Include="views\activity-area\free-delivery-for-first.aspx" />
+    <Content Include="views\ally-plan.aspx" />
+    <Content Include="views\inter-express\batch-import-old.aspx" />
+    <Content Include="views\inter-express\batch-order.aspx" />
+    <Content Include="views\inter-express\batch-purchase-process.aspx" />
+    <Content Include="views\exception\error-page.aspx" />
+    <Content Include="views\inter-express\batch-uk-pick-up.aspx" />
+    <Content Include="views\inter-express\local-order-pick-up.aspx" />
+    <Content Include="views\inter-express\local-order-process.aspx" />
+    <Content Include="views\inter-express\my-local-pick-up-cart.aspx" />
+    <Content Include="views\inter-express\order-label.aspx" />
+    <Content Include="views\inter-express\order-pay.aspx" />
+    <Content Include="views\inter-express\pay-success.aspx" />
+    <Content Include="views\inter-express\paycard.aspx" />
+    <Content Include="views\inter-express\paypal.aspx" />
+    <Content Include="views\inter-express\receive-addr-pop.aspx" />
+    <Content Include="views\inter-express\send-addr-pop.aspx" />
+    <Content Include="views\inter-express\simple-batch-uk-pick-up.aspx" />
+    <Content Include="views\purchase-process.aspx" />
+    <Content Include="views\uk-land-transport.aspx" />
+    <Content Include="views\user-frame\my-local-pick-up-cart.aspx" />
+    <Content Include="views\user-frame\local-order-process.aspx" />
+    <Content Include="views\my-account.aspx" />
+    <Content Include="views\my-account-old.aspx" />
+    <Content Include="views\my-cart-order-detail-info.aspx" />
+    <Content Include="views\my-order-detail-info.aspx" />
+    <Content Include="views\my-shopping-cart-old.aspx" />
+    <Content Include="views\my-shopping-cart.aspx" />
+    <Content Include="views\online-shopping\milkpowder-checkout.aspx" />
+    <Content Include="views\order-label.aspx" />
+    <Content Include="views\order-pay.aspx" />
+    <Content Include="views\pay-success.aspx" />
+    <Content Include="views\paycard-charge.aspx" />
+    <Content Include="views\Paycard.aspx" />
+    <Content Include="views\paypal-charge.aspx" />
+    <Content Include="views\Paypal.aspx" />
+    <Content Include="views\inter-express\simple-batch-order.aspx" />
+    <Content Include="views\inter-express\simple-batch-purchase-process.aspx" />
+    <Content Include="views\inter-express\postnl.aspx" />
+    <Content Include="views\online-shopping\carseat-checkout.aspx" />
+    <Content Include="views\code.aspx" />
+    <Content Include="views\contact-us.aspx" />
+    <Content Include="views\custom-point.aspx" />
+    <Content Include="views\custom-red-packet.aspx" />
+    <Content Include="views\Data\wssh.xml" />
+    <Content Include="views\Data\wsshcarseat.xml" />
+    <Content Include="views\inter-express\ems-direct.aspx" />
+    <Content Include="views\free-delivery-for-first.aspx" />
+    <Content Include="views\frequent-ask-question.aspx" />
+    <Content Include="views\index.aspx" />
+    <Content Include="views\online-shopping\luggage-box.aspx" />
+    <Content Include="views\online-shopping\milkpowder-sells.aspx" />
+    <Content Include="views\my-goods.aspx" />
+    <Content Include="views\online-shopping\supply-check-out.aspx" />
+    <Content Include="views\repeat-pay.aspx" />
+    <Content Include="views\sea-transport\uk-shopping-guide.aspx" />
+    <Content Include="views\order-detail-info.aspx" />
+    <Content Include="views\order-tracking.aspx" />
+    <Content Include="views\package-advice.aspx" />
+    <Content Include="views\inter-express\parcelforce-economy.aspx" />
+    <Content Include="views\inter-express\parcelforce-priority.aspx" />
+    <Content Include="views\online-quote.aspx" />
+    <Content Include="views\regist.aspx" />
+    <Content Include="views\reset-password.aspx" />
+    <Content Include="views\user-frame\order-label.aspx" />
+    <Content Include="views\user-frame\order-pay.aspx" />
+    <Content Include="views\user-frame\pay-by-wm-account.aspx" />
+    <Content Include="views\user-frame\pay-success.aspx" />
+    <Content Include="views\user-frame\paycard.aspx" />
+    <Content Include="views\user-frame\paypal.aspx" />
+    <Content Include="views\user-frame\repeat-pay.aspx" />
+    <Content Include="views\user-frame\select-charge-way.aspx" />
+    <Content Include="views\user-frame\account-charge.aspx" />
+    <Content Include="views\user-frame\change-password.aspx" />
+    <Content Include="views\user-frame\change-person-info.aspx" />
+    <Content Include="views\user-frame\check-local-order-by-number.aspx" />
+    <Content Include="views\user-frame\check-local-order-by-time.aspx" />
+    <Content Include="views\user-frame\check-order-by-number-old.aspx" />
+    <Content Include="views\user-frame\check-order-by-number.aspx" />
+    <Content Include="views\user-frame\check-order-by-time-old.aspx" />
+    <Content Include="views\user-frame\check-order-by-time.aspx" />
+    <Content Include="views\user-frame\local-order.aspx" />
+    <Content Include="views\user-frame\my-account-balance.aspx" />
+    <Content Include="views\user-frame\my-account-trans.aspx" />
+    <Content Include="views\user-frame\order-local-pick-up.aspx" />
+    <Content Include="views\user-frame\order-need-to-get-label.aspx" />
+    <Content Include="views\user-frame\receive-address.aspx" />
+    <Content Include="views\user-frame\send-address.aspx" />
+    <Content Include="views\user-login.aspx" />
+    <Content Include="views\what-is-prepay.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebService\WMOrderService.svc" />
+    <Content Include="wsshimages\51parcel-large.png" />
+    <Content Include="wsshimages\anpost-large.png" />
+    <Content Include="wsshimages\box_with_2milk.png" />
+    <Content Include="wsshimages\box_with_4milk.png" />
+    <Content Include="wsshimages\box_with_6milk.png" />
+    <Content Include="wsshimages\bpost-large.png" />
+    <Content Include="wsshimages\button_add.png" />
+    <Content Include="wsshimages\button_remove.png" />
+    <Content Include="wsshimages\h-line.gif" />
+    <Content Include="wsshimages\imglvl1.jpg" />
+    <Content Include="wsshimages\imglvl2.jpg" />
+    <Content Include="wsshimages\imglvl3.jpg" />
+    <Content Include="wsshimages\Int-Quote-box-result-box-bg.gif" />
+    <Content Include="wsshimages\int-quote-buy.gif" />
+    <Content Include="wsshimages\Int-Quote-Price-Box.gif" />
+    <Content Include="wsshimages\luggagebox.jpg" />
+    <Content Include="wsshimages\milkpowerLogo.jpg" />
+    <Content Include="wsshimages\Product_image_list_1001.png" />
+    <Content Include="wsshimages\Product_image_list_1002.png" />
+    <Content Include="wsshimages\Product_image_list_1003.png" />
+    <Content Include="wsshimages\Product_image_list_1004.png" />
+    <Content Include="wsshimages\Product_image_list_1005.jpg" />
+    <Content Include="wsshimages\Product_image_list_1006.jpg" />
+    <Content Include="wsshimages\Product_image_list_101.jpg" />
+    <Content Include="wsshimages\Product_image_list_102.jpg" />
+    <Content Include="wsshimages\Product_image_list_103.jpg" />
+    <Content Include="wsshimages\Product_image_list_104.jpg" />
+    <Content Include="wsshimages\Product_image_list_105.jpg" />
+    <Content Include="wsshimages\Product_image_list_106.jpg" />
+    <Content Include="wsshimages\Product_image_list_107.jpg" />
+    <Content Include="wsshimages\Product_image_list_108.jpg" />
+    <Content Include="wsshimages\Product_image_list_109.jpg" />
+    <Content Include="wsshimages\Product_image_list_110.jpg" />
+    <Content Include="wsshimages\S3.jpg" />
+    <Content Include="wsshimages\smallgray.gif" />
+    <Content Include="wsshimages\ucs-large.png" />
+    <None Include="Service References\ShipService\ShipServiceDefinitions.wsdl" />
+    <None Include="Service References\ShipService\WM_Project.ShipService.CancelShipmentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.CreateManifestReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.CreateShipmentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.FindReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.PrintDocumentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.PrintLabelReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.PrintManifestReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ShipService\WM_Project.ShipService.ReturnShipmentReply.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="views\excel-template\AUTPostNL.xls" />
+    <None Include="views\excel-template\collection.doc" />
+    <None Include="views\excel-template\PostEMS.xls" />
+    <None Include="views\excel-template\PostPFofCollection.xls" />
+    <None Include="views\excel-template\PostPFofDelivery.xls" />
+    <None Include="views\excel-upload\fighting20141223235514.xls" />
+    <None Include="views\excel-upload\fighting20141223235530.xls" />
+    <None Include="views\excel-upload\fighting20141224120649.xls" />
+    <None Include="views\excel-upload\fighting20141225233901.xls" />
+    <None Include="views\excel-upload\yangwang20141218151848.xls" />
+    <None Include="views\excel-upload\yangwang20141218151916.xls" />
+    <None Include="views\excel-upload\yangwang20141218201326.xls" />
+    <None Include="views\excel-upload\yangwang20141218210212.xls" />
+    <None Include="views\excel-upload\yangwang20141218210221.xls" />
+    <None Include="views\excel-upload\yangwang20141218210236.xls" />
+    <None Include="views\excel-upload\yangwang20141218210454.xls" />
+    <None Include="views\excel-upload\yangwang20141218210637.xls" />
+    <None Include="views\excel-upload\yangwang20141218210846.xls" />
+    <None Include="views\excel-upload\yangwang20141218210857.xls" />
+    <None Include="views\excel-upload\yangwang20141218211551.xls" />
+    <None Include="views\excel-upload\yangwang20141218213215.xls" />
+    <None Include="views\excel-upload\yangwang20141218213443.xls" />
+    <None Include="views\excel-upload\yangwang20141218213702.xls" />
+    <None Include="views\excel-upload\yangwang20141218214031.xls" />
+    <None Include="views\excel-upload\yangwang20141218214337.xls" />
+    <None Include="views\excel-upload\yangwang20141218215037.xls" />
+    <None Include="views\excel-upload\yangwang20141218215332.xls" />
+    <None Include="views\excel-upload\yangwang20141218215416.xls" />
+    <None Include="views\excel-upload\yangwang20141218215825.xls" />
+    <None Include="views\excel-upload\yangwang20141218220031.xls" />
+    <None Include="views\excel-upload\yangwang20141218220244.xls" />
+    <None Include="views\excel-upload\yangwang20141218220637.xls" />
+    <None Include="views\excel-upload\yangwang20141218221026.xls" />
+    <None Include="views\excel-upload\yangwang20141218221143.xls" />
+    <None Include="views\excel-upload\yangwang20141218222044.xls" />
+    <None Include="views\excel-upload\yangwang20141218224952.xls" />
+    <None Include="views\excel-upload\yangwang20141218225708.xls" />
+    <None Include="views\excel-upload\yangwang20141218230014.xls" />
+    <None Include="views\excel-upload\yangwang20141218230346.xls" />
+    <None Include="views\excel-upload\yangwang20141220103959.xls" />
+    <None Include="views\excel-upload\yangwang20141220104620.xls" />
+    <None Include="views\excel-upload\yangwang20141220105022.xls" />
+    <None Include="views\excel-upload\yangwang20141220105522.xls" />
+    <None Include="views\excel-upload\yangwang20141220105638.xls" />
+    <None Include="views\excel-upload\yangwang20141220110104.xls" />
+    <None Include="views\excel-upload\yangwang20141220110345.xls" />
+    <None Include="views\excel-upload\yangwang20141220113121.xls" />
+    <None Include="views\excel-upload\yangwang20141220121148.xls" />
+    <None Include="views\excel-upload\yangwang20141220121419.xls" />
+    <None Include="views\excel-upload\yangwang20141220122748.xls" />
+    <None Include="views\excel-upload\yangwang20141220123149.xls" />
+    <None Include="views\excel-upload\yangwang20141220123909.xls" />
+    <None Include="views\excel-upload\yangwang20141220124142.xls" />
+    <None Include="views\excel-upload\yangwang20141220124203.xls" />
+    <None Include="views\excel-upload\yangwang20141220124754.xls" />
+    <None Include="views\excel-upload\yangwang20141220125039.xls" />
+    <None Include="views\excel-upload\yangwang20141220125906.xls" />
+    <None Include="views\excel-upload\yangwang20141220195217.xls" />
+    <None Include="views\excel-upload\yangwang20141220195338.xls" />
+    <None Include="views\excel-upload\yangwang20141220195745.xls" />
+    <None Include="views\excel-upload\yangwang20141220195929.xls" />
+    <None Include="views\excel-upload\yangwang20141220200714.xls" />
+    <None Include="views\excel-upload\yangwang20141220201248.xls" />
+    <None Include="views\excel-upload\yangwang20141220201559.xls" />
+    <None Include="views\excel-upload\yangwang20141220202338.xls" />
+    <None Include="views\excel-upload\yangwang20141220202347.xls" />
+    <None Include="views\excel-upload\yangwang20141220223821.xls" />
+    <None Include="views\excel-upload\yangwang20141220232958.xls" />
+    <None Include="views\excel-upload\yangwang20141221204028.xls" />
+    <None Include="views\excel-upload\yangwang20141221205153.xls" />
+    <None Include="views\excel-upload\yangwang20141221205326.xls" />
+    <None Include="views\excel-upload\yangwang20141221210421.xls" />
+    <None Include="views\excel-upload\yangwang20141221210612.xls" />
+    <None Include="views\excel-upload\yangwang20141221210723.xls" />
+    <None Include="views\excel-upload\yangwang20141221211724.xls" />
+    <None Include="views\excel-upload\yangwang20141221221658.xls" />
+    <None Include="views\excel-upload\yangwang20141221222718.xls" />
+    <None Include="views\excel-upload\yangwang20141221223116.xls" />
+    <None Include="views\excel-upload\yangwang20141221223346.xls" />
+    <None Include="views\excel-upload\yangwang20141221223440.xls" />
+    <None Include="views\excel-upload\yangwang20141221224221.xls" />
+    <None Include="views\excel-upload\yangwang20141221224611.xls" />
+    <None Include="views\excel-upload\yangwang20141221225135.xls" />
+    <None Include="views\excel-upload\yangwang20141221225251.xls" />
+    <None Include="views\excel-upload\yangwang20141221225810.xls" />
+    <None Include="views\excel-upload\yangwang20141221225837.xls" />
+    <None Include="views\excel-upload\yangwang20141221230044.xls" />
+    <None Include="views\excel-upload\yangwang20141221230353.xls" />
+    <None Include="views\excel-upload\yangwang20141222001538.xls" />
+    <None Include="views\excel-upload\yangwang20141222001655.xls" />
+    <None Include="views\excel-upload\yangwang20141222001751.xls" />
+    <None Include="views\excel-upload\yangwang20141222002246.xls" />
+    <None Include="views\excel-upload\yangwang20141222210153.xls" />
+    <None Include="views\excel-upload\yangwang20141222210158.xls" />
+    <None Include="views\excel-upload\yangwang20141222210206.xls" />
+    <None Include="views\excel-upload\yangwang20141222221319.xls" />
+    <None Include="views\excel-upload\yangwang20141222222030.xls" />
+    <None Include="views\excel-upload\yangwang20141222222449.xls" />
+    <None Include="views\excel-upload\yangwang20141222223327.xls" />
+    <None Include="views\excel-upload\yangwang20141222223334.xls" />
+    <None Include="views\excel-upload\yangwang20141222233859.xls" />
+    <None Include="views\excel-upload\yangwang20141222234147.xls" />
+    <None Include="views\excel-upload\yangwang20141222234217.xls" />
+    <None Include="views\excel-upload\yangwang20141222234450.xls" />
+    <None Include="views\excel-upload\yangwang20141222234716.xls" />
+    <None Include="views\excel-upload\yangwang20141223000137.xls" />
+    <None Include="views\excel-upload\yangwang20141223003905.xls" />
+    <None Include="views\excel-upload\yangwang20141223004543.xls" />
+    <None Include="views\excel-upload\yangwang20141223005727.xls" />
+    <None Include="views\excel-upload\yangwang20141223012200.xls" />
+    <None Include="views\excel-upload\yangwang20141223012701.xls" />
+    <None Include="views\excel-upload\yangwang20141223012834.xls" />
+    <None Include="views\excel-upload\yangwang20141223012944.xls" />
+    <None Include="views\excel-upload\yangwang20141223013116.xls" />
+    <None Include="views\excel-upload\yangwang20141223013536.xls" />
+    <None Include="views\excel-upload\yangwang20141223113701.xls" />
+    <None Include="views\excel-upload\yangwang20141223115212.xls" />
+    <None Include="views\excel-upload\yangwang20141223115228.xls" />
+    <None Include="views\excel-upload\yangwang20141223115547.xls" />
+    <None Include="views\excel-upload\yangwang20141223115822.xls" />
+    <None Include="views\excel-upload\yangwang20141223120145.xls" />
+    <None Include="views\excel-upload\yangwang20141223120759.xls" />
+    <None Include="views\excel-upload\yangwang20141223120908.xls" />
+    <None Include="views\excel-upload\yangwang20141223121402.xls" />
+    <None Include="views\excel-upload\yangwang20141223122057.xls" />
+    <None Include="views\excel-upload\yangwang20141223122410.xls" />
+    <None Include="views\excel-upload\yangwang20141223122640.xls" />
+    <None Include="views\excel-upload\yangwang20141223122946.xls" />
+    <None Include="views\excel-upload\yangwang20141223123142.xls" />
+    <None Include="views\excel-upload\yangwang20141223123404.xls" />
+    <None Include="views\excel-upload\yangwang20141223130319.xls" />
+    <None Include="views\excel-upload\yangwang20141223130331.xls" />
+    <None Include="views\excel-upload\yangwang20141223130344.xls" />
+    <None Include="views\excel-upload\yangwang20141223130444.xls" />
+    <None Include="views\excel-upload\yangwang20141223130454.xls" />
+    <None Include="views\excel-upload\yangwang20141223200407.xls" />
+    <None Include="views\excel-upload\yangwang20141223200505.xls" />
+    <None Include="views\excel-upload\yangwang20141223200711.xls" />
+    <None Include="views\excel-upload\yangwang20141223201044.xls" />
+    <None Include="views\excel-upload\yangwang20141223202224.xls" />
+    <None Include="views\excel-upload\yangwang20141223202258.xls" />
+    <None Include="views\excel-upload\yangwang20141223202608.xls" />
+    <None Include="views\excel-upload\yangwang20141223202704.xls" />
+    <None Include="views\excel-upload\yangwang20141223202938.xls" />
+    <None Include="views\excel-upload\yangwang20141223203439.xls" />
+    <None Include="views\excel-upload\yangwang20141223203909.xls" />
+    <None Include="views\excel-upload\yangwang20141223204023.xls" />
+    <None Include="views\excel-upload\yangwang20141223215828.xls" />
+    <None Include="views\excel-upload\yangwang20141223222602.xls" />
+    <None Include="views\excel-upload\yangwang20141223222804.xls" />
+    <None Include="views\excel-upload\yangwang20141223223132.xls" />
+    <None Include="views\excel-upload\yangwang20141223223428.xls" />
+    <None Include="views\excel-upload\yangwang20141223223801.xls" />
+    <None Include="views\excel-upload\yangwang20141223224355.xls" />
+    <None Include="views\excel-upload\yangwang20141223224525.xls" />
+    <None Include="views\excel-upload\yangwang20141223224622.xls" />
+    <None Include="views\excel-upload\yangwang20141223224631.xls" />
+    <None Include="views\excel-upload\yangwang20141223224920.xls" />
+    <None Include="views\excel-upload\yangwang20141223232752.xls" />
+    <None Include="views\excel-upload\yangwang20141223233007.xls" />
+    <None Include="views\excel-upload\yangwang20141223234919.xls" />
+    <None Include="views\excel-upload\yangwang20141223234928.xls" />
+    <None Include="views\excel-upload\yangwang20141223235436.xls" />
+    <None Include="views\excel-upload\yangwang20141224000137.xls" />
+    <None Include="views\excel-upload\yangwang20141224232050.xls" />
+    <None Include="views\excel-upload\yangwang20141224232832.xls" />
+    <None Include="views\excel-upload\yangwang20141225162301.xls" />
+    <None Include="views\excel-upload\yangwang20141225162745.xls" />
+    <None Include="views\excel-upload\yangwang20141225163048.xls" />
+    <None Include="views\excel-upload\yangwang20141225163554.xls" />
+    <None Include="views\excel-upload\yangwang20141225163702.xls" />
+    <None Include="views\excel-upload\yangwang20141225163725.xls" />
+    <None Include="views\excel-upload\yangwang20141225163850.xls" />
+    <None Include="views\excel-upload\yangwang20141225164750.xls" />
+    <None Include="views\excel-upload\yangwang20141225164804.xls" />
+    <None Include="views\excel-upload\yangwang20141225164818.xls" />
+    <None Include="views\excel-upload\yangwang20141225164833.xls" />
+    <None Include="views\excel-upload\yangwang20141225165053.xls" />
+    <None Include="views\excel-upload\yangwang20141225165110.xls" />
+    <None Include="views\excel-upload\yangwang20141225165125.xls" />
+    <None Include="views\excel-upload\yangwang20141225165213.xls" />
+    <None Include="views\excel-upload\yangwang20141225165544.xls" />
+    <None Include="views\excel-upload\yangwang20141225182402.xls" />
+    <None Include="views\excel-upload\yangwang20141225192424.xls" />
+    <None Include="views\excel-upload\yangwang20141225192457.xls" />
+    <None Include="views\excel-upload\yangwang20141225193653.xls" />
+    <None Include="views\excel-upload\yangwang20141225213313.xls" />
+    <None Include="views\excel-upload\yangwang20141225215319.xls" />
+    <None Include="views\excel-upload\yangwang20141225215515.xls" />
+    <None Include="views\excel-upload\yangwang20141225222658.xls" />
+    <None Include="views\excel-upload\yangwang20141225223330.xls" />
+    <None Include="views\excel-upload\yangwang20141225224122.xls" />
+    <None Include="views\excel-upload\yangwang20141229150139.xls" />
+    <None Include="views\excel-upload\yangwang20141229150318.xls" />
+    <None Include="views\excel-upload\yangwang20141229150659.xls" />
+    <None Include="views\excel-upload\yangwang20141229151243.xls" />
+    <None Include="views\excel-upload\yangwang20141229160048.xls" />
+    <None Include="views\excel-upload\yangwang20141229203210.xls" />
+    <None Include="views\excel-upload\yangwang20141229203233.xls" />
+    <None Include="views\excel-upload\yangwang20141229222001.xls" />
+    <None Include="views\excel-upload\yangwang20141230105735.xls" />
+    <None Include="views\excel-upload\yangwang20141230105933.xls" />
+    <None Include="views\excel-upload\yangwang20141230110000.xls" />
+    <None Include="views\excel-upload\yangwang20141230110357.xls" />
+    <None Include="views\excel-upload\yangwang20141230110759.xls" />
+    <None Include="views\excel-upload\yangwang20141230111037.xls" />
+    <None Include="views\excel-upload\yangwang20141230112121.xls" />
+    <None Include="views\excel-upload\yangwang20141230112641.xls" />
+    <None Include="views\excel-upload\yangwang20141230125550.xls" />
+    <None Include="views\excel-upload\yangwang20141230125716.xls" />
+    <None Include="views\excel-upload\yangwang20141230125909.xls" />
+    <None Include="views\excel-upload\yangwang20141230130151.xls" />
+    <None Include="views\excel-upload\yangwang20141230130303.xls" />
+    <None Include="views\excel-upload\yangwang20141230163536.xls" />
+    <None Include="views\excel-upload\yangwang20141230170141.xls" />
+    <None Include="views\excel-upload\yangwang20141230170407.xls" />
+    <None Include="views\excel-upload\yangwang20141230170540.xls" />
+    <None Include="views\excel-upload\yangwang20141231165453.xls" />
+    <None Include="views\excel-upload\yangwang20150101210729.xls" />
+    <Content Include="views\Handler1.ashx" />
+    <None Include="views\inter-express\excel-template\AUTPostNL.xls" />
+    <None Include="views\inter-express\excel-template\collection.doc" />
+    <None Include="views\inter-express\excel-template\PostEMS.xls" />
+    <None Include="views\inter-express\excel-template\PostPFofCollection.xls" />
+    <None Include="views\inter-express\excel-template\PostPFofDelivery.xls" />
+    <None Include="views\inter-express\excel-upload\fighting20141223235514.xls" />
+    <None Include="views\inter-express\excel-upload\fighting20141223235530.xls" />
+    <None Include="views\inter-express\excel-upload\fighting20141224120649.xls" />
+    <None Include="views\inter-express\excel-upload\fighting20141225233901.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218151848.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218151916.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218201326.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210212.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210221.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210236.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210454.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210637.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210846.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218210857.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218211551.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218213215.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218213443.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218213702.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218214031.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218214337.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218215037.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218215332.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218215416.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218215825.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218220031.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218220244.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218220637.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218221026.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218221143.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218222044.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218224952.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218225708.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218230014.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141218230346.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220103959.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220104620.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220105022.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220105522.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220105638.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220110104.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220110345.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220113121.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220121148.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220121419.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220122748.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220123149.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220123909.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220124142.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220124203.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220124754.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220125039.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220125906.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220195217.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220195338.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220195745.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220195929.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220200714.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220201248.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220201559.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220202338.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220202347.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220223821.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141220232958.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221003600.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221204028.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221205153.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221205326.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221210421.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221210612.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221210723.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221211724.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221221658.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221222718.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221223116.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221223346.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221223440.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221224221.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221224611.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221225135.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221225251.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221225810.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221225837.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221230044.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141221230353.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222001538.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222001655.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222001751.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222002246.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222153552.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222153751.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222164259.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222164411.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222194453.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222195744.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222195918.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222200909.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210033.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210051.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210111.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210116.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210121.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210127.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210132.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210137.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210147.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210153.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210158.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222210206.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222221319.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222222030.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222222449.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222223327.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222223334.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222233859.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222234147.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222234217.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222234450.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141222234716.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223000137.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223003905.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223004543.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223005727.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223012200.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223012701.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223012834.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223012944.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223013116.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223013536.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223113701.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223115212.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223115228.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223115547.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223115822.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223120145.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223120759.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223120908.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223121402.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223122057.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223122410.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223122640.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223122946.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223123142.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223123404.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223130319.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223130331.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223130344.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223130444.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223130454.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223200407.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223200505.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223200711.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223201044.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223202224.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223202258.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223202608.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223202704.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223202938.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223203439.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223203909.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223204023.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223215828.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223222602.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223222804.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223223132.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223223428.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223223801.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223224355.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223224525.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223224622.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223224631.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223224920.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223232752.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223233007.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223234919.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223234928.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141223235436.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141224000137.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141224232050.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141224232832.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225162301.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225162745.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225163048.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225163554.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225163702.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225163725.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225163850.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225164750.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225164804.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225164818.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225164833.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225165053.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225165110.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225165125.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225165213.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225165544.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225182402.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225192424.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225192457.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225193653.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225213313.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225215319.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225215515.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225222658.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225223330.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141225224122.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229150139.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229150318.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229150659.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229151243.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229160048.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229203210.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229203233.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141229222001.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230105735.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230105933.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230110000.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230110357.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230110759.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230111037.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230112121.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230112641.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230125550.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230125716.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230125909.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230130151.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230130303.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230163536.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230170141.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230170407.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141230170540.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20141231165453.xls" />
+    <None Include="views\inter-express\excel-upload\yangwang20150101210729.xls" />
+    <Content Include="views\inter-express\ReceiveAdress.ashx" />
+    <None Include="views\pdf\WP-201412201231000000070.pdf" />
+    <None Include="views\pdf\WP-201412201231000000071.pdf" />
+    <None Include="views\pdf\WP-201412201231000000080.pdf" />
+    <None Include="views\pdf\WP-201412201231000000081.pdf" />
+    <None Include="views\pdf\WP-201412201239000000010.pdf" />
+    <None Include="views\pdf\WP-201412201239000000011.pdf" />
+    <None Include="views\pdf\WP-201412201239000000012.pdf" />
+    <None Include="views\pdf\WP-201412201239000000013.pdf" />
+    <None Include="views\pdf\WP-201412201239000000020.pdf" />
+    <None Include="views\pdf\WP-201412201239000000021.pdf" />
+    <None Include="views\pdf\WP-201412201239000000022.pdf" />
+    <None Include="views\pdf\WP-201412201242000000120.pdf" />
+    <None Include="views\pdf\WP-201412201242000000121.pdf" />
+    <None Include="views\pdf\WP-201412201242000000122.pdf" />
+    <None Include="views\pdf\WP-201412201242000000170.pdf" />
+    <None Include="views\pdf\WP-201412201247000000001.pdf" />
+    <None Include="views\pdf\WP-201412201247000000002.pdf" />
+    <None Include="views\pdf\WP-201412201247000000052.pdf" />
+    <None Include="views\pdf\WP-201412201250000000011.pdf" />
+    <None Include="views\pdf\WP-201412201250000000012.pdf" />
+    <None Include="views\pdf\WP-201412201250000000051.pdf" />
+    <None Include="views\pdf\WP-201412201250000000052.pdf" />
+    <None Include="views\pdf\WP-201412201259000000011.pdf" />
+    <None Include="views\pdf\WP-201412201259000000012.pdf" />
+    <None Include="views\pdf\WP-201412201259000000013.pdf" />
+    <None Include="views\pdf\WP-201412201259000000041.pdf" />
+    <None Include="views\pdf\WP-201412201259000000042.pdf" />
+    <None Include="views\pdf\WP-201412201952000000010.pdf" />
+    <None Include="views\pdf\WP-201412201952000000011.pdf" />
+    <None Include="views\pdf\WP-201412201952000000012.pdf" />
+    <None Include="views\pdf\WP-201412202012000000000.pdf" />
+    <None Include="views\pdf\WP-201412202012000000001.pdf" />
+    <None Include="views\pdf\WP-201412202012000000002.pdf" />
+    <None Include="views\pdf\WP-201412202012000000010.pdf" />
+    <None Include="views\pdf\WP-201412202012000000011.pdf" />
+    <None Include="views\pdf\WP-201412202012000000012.pdf" />
+    <None Include="views\pdf\WP-201412202012000000020.pdf" />
+    <None Include="views\pdf\WP-201412202012000000021.pdf" />
+    <None Include="views\pdf\WP-201412202012000000022.pdf" />
+    <None Include="views\pdf\WP-201412202023000000131.pdf" />
+    <None Include="views\pdf\WP-201412202023000000132.pdf" />
+    <None Include="views\pdf\WP-201412202023000000133.pdf" />
+    <None Include="views\pdf\WP-201412202023000000141.pdf" />
+    <None Include="views\pdf\WP-201412202023000000142.pdf" />
+    <None Include="views\pdf\WP-201412202023000000151.pdf" />
+    <None Include="views\pdf\WP-201412202023000000152.pdf" />
+    <None Include="views\pdf\WP-201412202023000000161.pdf" />
+    <None Include="views\pdf\WP-201412202023000000162.pdf" />
+    <None Include="views\pdf\WP-201412202238000000001.pdf" />
+    <None Include="views\pdf\WP-201412202238000000002.pdf" />
+    <None Include="views\pdf\WP-201412202238000000011.pdf" />
+    <None Include="views\pdf\WP-201412202238000000012.pdf" />
+    <None Include="views\pdf\WP-201412202238000000021.pdf" />
+    <None Include="views\pdf\WP-201412202238000000022.pdf" />
+    <None Include="views\pdf\WP-201412202238000000031.pdf" />
+    <None Include="views\pdf\WP-201412202238000000032.pdf" />
+    <None Include="views\pdf\WP-201412202329000000001.pdf" />
+    <None Include="views\pdf\WP-201412202329000000002.pdf" />
+    <None Include="views\pdf\WP-201412202329000000011.pdf" />
+    <None Include="views\pdf\WP-201412202329000000012.pdf" />
+    <None Include="views\pdf\WP-201412202329000000021.pdf" />
+    <None Include="views\pdf\WP-201412202329000000022.pdf" />
+    <None Include="views\pdf\WP-201412202329000000031.pdf" />
+    <None Include="views\pdf\WP-201412202329000000032.pdf" />
+    <None Include="views\pdf\WP-201412210036000000040.pdf" />
+    <None Include="views\pdf\WP-201412210036000000041.pdf" />
+    <None Include="views\pdf\WP-201412210036000000042.pdf" />
+    <None Include="views\pdf\WP-20141221204000000000.pdf" />
+    <None Include="views\pdf\WP-20141221204000000001.pdf" />
+    <None Include="views\pdf\WP-20141221204000000002.pdf" />
+    <None Include="views\pdf\WP-201412212051000000002.pdf" />
+    <None Include="views\pdf\WP-201412212053000000002.pdf" />
+    <None Include="views\pdf\WP-201412212053000000012.pdf" />
+    <None Include="views\pdf\WP-201412212053000000022.pdf" />
+    <None Include="views\pdf\WP-201412212106000000022.pdf" />
+    <None Include="views\pdf\WP-201412212107000000002.pdf" />
+    <None Include="views\pdf\WP-201412212107000000012.pdf" />
+    <None Include="views\pdf\WP-201412212107000000022.pdf" />
+    <None Include="views\pdf\WP-201412212117000000032.pdf" />
+    <None Include="views\pdf\WP-201412212117000000042.pdf" />
+    <None Include="views\pdf\WP-201412212117000000052.pdf" />
+    <None Include="views\pdf\WP-201412212216000000002.pdf" />
+    <None Include="views\pdf\WP-201412212216000000012.pdf" />
+    <None Include="views\pdf\WP-201412212216000000022.pdf" />
+    <None Include="views\pdf\WP-201412212227000000002.pdf" />
+    <None Include="views\pdf\WP-201412212227000000012.pdf" />
+    <None Include="views\pdf\WP-201412212227000000022.pdf" />
+    <None Include="views\pdf\WP-201412212231000000002.pdf" />
+    <None Include="views\pdf\WP-201412212231000000012.pdf" />
+    <None Include="views\pdf\WP-201412212231000000022.pdf" />
+    <None Include="views\pdf\WP-201412212233000000002.pdf" />
+    <None Include="views\pdf\WP-201412212233000000012.pdf" />
+    <None Include="views\pdf\WP-201412212233000000022.pdf" />
+    <None Include="views\pdf\WP-201412212234000000002.pdf" />
+    <None Include="views\pdf\WP-201412212234000000012.pdf" />
+    <None Include="views\pdf\WP-201412212234000000022.pdf" />
+    <None Include="views\pdf\WP-201412212242000000002.pdf" />
+    <None Include="views\pdf\WP-201412212242000000003.pdf" />
+    <None Include="views\pdf\WP-201412212242000000012.pdf" />
+    <None Include="views\pdf\WP-201412212242000000022.pdf" />
+    <None Include="views\pdf\WP-201412212246000000002.pdf" />
+    <None Include="views\pdf\WP-201412212246000000003.pdf" />
+    <None Include="views\pdf\WP-201412212246000000012.pdf" />
+    <None Include="views\pdf\WP-201412212246000000022.pdf" />
+    <None Include="views\pdf\WP-201412212251000000002.pdf" />
+    <None Include="views\pdf\WP-201412212251000000003.pdf" />
+    <None Include="views\pdf\WP-201412212251000000012.pdf" />
+    <None Include="views\pdf\WP-201412212251000000022.pdf" />
+    <None Include="views\pdf\WP-201412212252000000002.pdf" />
+    <None Include="views\pdf\WP-201412212252000000003.pdf" />
+    <None Include="views\pdf\WP-201412212252000000012.pdf" />
+    <None Include="views\pdf\WP-201412212252000000022.pdf" />
+    <None Include="views\pdf\WP-201412212258000000002.pdf" />
+    <None Include="views\pdf\WP-201412222101000000181.pdf" />
+    <None Include="views\pdf\WP-201412222101000000182.pdf" />
+    <None Include="views\pdf\WP-201412222101000000190.pdf" />
+    <None Include="views\pdf\WP-201412222101000000191.pdf" />
+    <None Include="views\pdf\WP-201412222101000000192.pdf" />
+    <None Include="views\pdf\WP-201412222101000000200.pdf" />
+    <None Include="views\pdf\WP-201412222101000000201.pdf" />
+    <None Include="views\pdf\WP-201412222101000000202.pdf" />
+    <None Include="views\pdf\WP-201412222101000000210.pdf" />
+    <None Include="views\pdf\WP-201412222101000000211.pdf" />
+    <None Include="views\pdf\WP-201412222101000000212.pdf" />
+    <None Include="views\pdf\WP-201412222101000000220.pdf" />
+    <None Include="views\pdf\WP-201412222101000000221.pdf" />
+    <None Include="views\pdf\WP-201412222101000000222.pdf" />
+    <None Include="views\pdf\WP-201412222101000000230.pdf" />
+    <None Include="views\pdf\WP-201412222101000000231.pdf" />
+    <None Include="views\pdf\WP-201412222101000000232.pdf" />
+    <None Include="views\pdf\WP-201412222101000000240.pdf" />
+    <None Include="views\pdf\WP-201412222101000000241.pdf" />
+    <None Include="views\pdf\WP-201412222101000000242.pdf" />
+    <None Include="views\pdf\WP-201412222101000000250.pdf" />
+    <None Include="views\pdf\WP-201412222101000000251.pdf" />
+    <None Include="views\pdf\WP-201412222101000000252.pdf" />
+    <None Include="views\pdf\WP-201412222101000000260.pdf" />
+    <None Include="views\pdf\WP-201412222101000000261.pdf" />
+    <None Include="views\pdf\WP-201412222101000000262.pdf" />
+    <None Include="views\pdf\WP-201412222101000000270.pdf" />
+    <None Include="views\pdf\WP-201412222101000000271.pdf" />
+    <None Include="views\pdf\WP-201412222101000000272.pdf" />
+    <None Include="views\pdf\WP-201412222101000000280.pdf" />
+    <None Include="views\pdf\WP-201412222101000000281.pdf" />
+    <None Include="views\pdf\WP-201412222101000000282.pdf" />
+    <None Include="views\pdf\WP-201412222101000000290.pdf" />
+    <None Include="views\pdf\WP-201412222101000000291.pdf" />
+    <None Include="views\pdf\WP-201412222101000000292.pdf" />
+    <None Include="views\pdf\WP-201412222101000000300.pdf" />
+    <None Include="views\pdf\WP-201412222101000000301.pdf" />
+    <None Include="views\pdf\WP-201412222101000000302.pdf" />
+    <None Include="views\pdf\WP-201412222101000000310.pdf" />
+    <None Include="views\pdf\WP-201412222101000000311.pdf" />
+    <None Include="views\pdf\WP-201412222101000000312.pdf" />
+    <None Include="views\pdf\WP-201412222101000000320.pdf" />
+    <None Include="views\pdf\WP-201412222101000000321.pdf" />
+    <None Include="views\pdf\WP-201412222101000000322.pdf" />
+    <None Include="views\pdf\WP-201412222102000000330.pdf" />
+    <None Include="views\pdf\WP-201412222102000000331.pdf" />
+    <None Include="views\pdf\WP-201412222102000000332.pdf" />
+    <None Include="views\pdf\WP-201412222102000000340.pdf" />
+    <None Include="views\pdf\WP-201412222102000000341.pdf" />
+    <None Include="views\pdf\WP-201412222102000000342.pdf" />
+    <None Include="views\pdf\WP-201412222102000000350.pdf" />
+    <None Include="views\pdf\WP-201412222102000000351.pdf" />
+    <None Include="views\pdf\WP-201412222102000000352.pdf" />
+    <None Include="views\pdf\WP-201412222213000000000.pdf" />
+    <None Include="views\pdf\WP-201412222213000000001.pdf" />
+    <None Include="views\pdf\WP-201412222213000000002.pdf" />
+    <None Include="views\pdf\WP-201412222213000000010.pdf" />
+    <None Include="views\pdf\WP-201412222213000000011.pdf" />
+    <None Include="views\pdf\WP-201412222213000000012.pdf" />
+    <None Include="views\pdf\WP-201412222213000000020.pdf" />
+    <None Include="views\pdf\WP-201412222213000000021.pdf" />
+    <None Include="views\pdf\WP-201412222213000000022.pdf" />
+    <None Include="views\pdf\WP-201412222220000000680.pdf" />
+    <None Include="views\pdf\WP-201412222220000000681.pdf" />
+    <None Include="views\pdf\WP-201412222220000000682.pdf" />
+    <None Include="views\pdf\WP-201412222224000000000.pdf" />
+    <None Include="views\pdf\WP-201412222224000000001.pdf" />
+    <None Include="views\pdf\WP-201412222224000000002.pdf" />
+    <None Include="views\pdf\WP-201412222224000000010.pdf" />
+    <None Include="views\pdf\WP-201412222224000000011.pdf" />
+    <None Include="views\pdf\WP-201412222224000000012.pdf" />
+    <None Include="views\pdf\WP-201412222224000000020.pdf" />
+    <None Include="views\pdf\WP-201412222224000000021.pdf" />
+    <None Include="views\pdf\WP-201412222224000000022.pdf" />
+    <None Include="views\pdf\WP-201412222224000000030.pdf" />
+    <None Include="views\pdf\WP-201412222224000000031.pdf" />
+    <None Include="views\pdf\WP-201412222224000000032.pdf" />
+    <None Include="views\pdf\WP-201412222224000000040.pdf" />
+    <None Include="views\pdf\WP-201412222224000000041.pdf" />
+    <None Include="views\pdf\WP-201412222224000000042.pdf" />
+    <None Include="views\pdf\WP-201412222224000000050.pdf" />
+    <None Include="views\pdf\WP-201412222224000000051.pdf" />
+    <None Include="views\pdf\WP-201412222224000000052.pdf" />
+    <None Include="views\pdf\WP-201412222224000000060.pdf" />
+    <None Include="views\pdf\WP-201412222224000000061.pdf" />
+    <None Include="views\pdf\WP-201412222224000000062.pdf" />
+    <None Include="views\pdf\WP-201412222233000000750.pdf" />
+    <None Include="views\pdf\WP-201412222233000000751.pdf" />
+    <None Include="views\pdf\WP-201412222233000000752.pdf" />
+    <None Include="views\pdf\WP-201412222347000000001.pdf" />
+    <None Include="views\pdf\WP-201412222347000000002.pdf" />
+    <None Include="views\pdf\WP-201412222347000000011.pdf" />
+    <None Include="views\pdf\WP-201412222347000000012.pdf" />
+    <None Include="views\pdf\WP-201412230001000000000.pdf" />
+    <None Include="views\pdf\WP-201412230001000000001.pdf" />
+    <None Include="views\pdf\WP-201412230001000000002.pdf" />
+    <None Include="views\pdf\WP-201412230001000000010.pdf" />
+    <None Include="views\pdf\WP-201412230001000000011.pdf" />
+    <None Include="views\pdf\WP-201412230001000000012.pdf" />
+    <None Include="views\pdf\WP-201412230001000000020.pdf" />
+    <None Include="views\pdf\WP-201412230001000000021.pdf" />
+    <None Include="views\pdf\WP-201412230001000000022.pdf" />
+    <None Include="views\pdf\WP-201412230001000000030.pdf" />
+    <None Include="views\pdf\WP-201412230001000000031.pdf" />
+    <None Include="views\pdf\WP-201412230001000000032.pdf" />
+    <None Include="views\pdf\WP-201412230001000000040.pdf" />
+    <None Include="views\pdf\WP-201412230001000000041.pdf" />
+    <None Include="views\pdf\WP-201412230001000000042.pdf" />
+    <None Include="views\pdf\WP-201412230001000000050.pdf" />
+    <None Include="views\pdf\WP-201412230001000000051.pdf" />
+    <None Include="views\pdf\WP-201412230001000000052.pdf" />
+    <None Include="views\pdf\WP-201412230001000000060.pdf" />
+    <None Include="views\pdf\WP-201412230001000000061.pdf" />
+    <None Include="views\pdf\WP-201412230001000000062.pdf" />
+    <None Include="views\pdf\WP-201412230001000000070.pdf" />
+    <None Include="views\pdf\WP-201412230001000000071.pdf" />
+    <None Include="views\pdf\WP-201412230001000000072.pdf" />
+    <None Include="views\pdf\WP-201412230001000000080.pdf" />
+    <None Include="views\pdf\WP-201412230001000000081.pdf" />
+    <None Include="views\pdf\WP-201412230001000000082.pdf" />
+    <None Include="views\pdf\WP-201412230001000000090.pdf" />
+    <None Include="views\pdf\WP-201412230001000000091.pdf" />
+    <None Include="views\pdf\WP-201412230001000000092.pdf" />
+    <None Include="views\pdf\WP-201412230001000000100.pdf" />
+    <None Include="views\pdf\WP-201412230001000000101.pdf" />
+    <None Include="views\pdf\WP-201412230001000000102.pdf" />
+    <None Include="views\pdf\WP-201412230001000000110.pdf" />
+    <None Include="views\pdf\WP-201412230001000000111.pdf" />
+    <None Include="views\pdf\WP-201412230001000000112.pdf" />
+    <None Include="views\pdf\WP-201412230001000000120.pdf" />
+    <None Include="views\pdf\WP-201412230001000000121.pdf" />
+    <None Include="views\pdf\WP-201412230001000000122.pdf" />
+    <None Include="views\pdf\WP-201412230001000000130.pdf" />
+    <None Include="views\pdf\WP-201412230001000000131.pdf" />
+    <None Include="views\pdf\WP-201412230001000000132.pdf" />
+    <None Include="views\pdf\WP-201412230001000000140.pdf" />
+    <None Include="views\pdf\WP-201412230001000000141.pdf" />
+    <None Include="views\pdf\WP-201412230001000000142.pdf" />
+    <None Include="views\pdf\WP-201412230001000000150.pdf" />
+    <None Include="views\pdf\WP-201412230001000000151.pdf" />
+    <None Include="views\pdf\WP-201412230001000000152.pdf" />
+    <None Include="views\pdf\WP-201412230057000000011.pdf" />
+    <None Include="views\pdf\WP-201412230057000000012.pdf" />
+    <None Include="views\pdf\WP-201412230122000000011.pdf" />
+    <None Include="views\pdf\WP-201412230122000000012.pdf" />
+    <None Include="views\pdf\WP-201412230127000000031.pdf" />
+    <None Include="views\pdf\WP-201412230127000000032.pdf" />
+    <None Include="views\pdf\WP-201412230128000000051.pdf" />
+    <None Include="views\pdf\WP-201412230128000000052.pdf" />
+    <None Include="views\pdf\WP-201412230129000000071.pdf" />
+    <None Include="views\pdf\WP-201412230129000000072.pdf" />
+    <None Include="views\pdf\WP-201412230131000000091.pdf" />
+    <None Include="views\pdf\WP-201412230131000000092.pdf" />
+    <None Include="views\pdf\WP-201412230135000000011.pdf" />
+    <None Include="views\pdf\WP-201412230135000000012.pdf" />
+    <None Include="views\pdf\WP-201412231234000000040.pdf" />
+    <None Include="views\pdf\WP-201412231234000000041.pdf" />
+    <None Include="views\pdf\WP-201412231234000000042.pdf" />
+    <None Include="views\pdf\WP-201412231234000000050.pdf" />
+    <None Include="views\pdf\WP-201412231234000000051.pdf" />
+    <None Include="views\pdf\WP-201412231234000000052.pdf" />
+    <None Include="views\pdf\WP-201412231234000000061.pdf" />
+    <None Include="views\pdf\WP-201412231303000001251.pdf" />
+    <None Include="views\pdf\WP-201412231303000001252.pdf" />
+    <None Include="views\pdf\WP-201412231304000001542.pdf" />
+    <None Include="views\pdf\WP-201412231304000001552.pdf" />
+    <None Include="views\pdf\WP-201412231304000001562.pdf" />
+    <None Include="views\pdf\WP-201412232007000000000.pdf" />
+    <None Include="views\pdf\WP-201412232007000000001.pdf" />
+    <None Include="views\pdf\WP-201412232007000000002.pdf" />
+    <None Include="views\pdf\WP-201412232007000000010.pdf" />
+    <None Include="views\pdf\WP-201412232007000000011.pdf" />
+    <None Include="views\pdf\WP-201412232007000000012.pdf" />
+    <None Include="views\pdf\WP-201412232007000000020.pdf" />
+    <None Include="views\pdf\WP-201412232007000000021.pdf" />
+    <None Include="views\pdf\WP-201412232007000000022.pdf" />
+    <None Include="views\pdf\WP-201412232007000000030.pdf" />
+    <None Include="views\pdf\WP-201412232007000000031.pdf" />
+    <None Include="views\pdf\WP-201412232007000000032.pdf" />
+    <None Include="views\pdf\WP-201412232027000000002.pdf" />
+    <None Include="views\pdf\WP-201412232027000000012.pdf" />
+    <None Include="views\pdf\WP-201412232027000000022.pdf" />
+    <None Include="views\pdf\WP-201412232040000000002.pdf" />
+    <None Include="views\pdf\WP-201412232040000000012.pdf" />
+    <None Include="views\pdf\WP-201412232040000000022.pdf" />
+    <None Include="views\pdf\WP-201412232234000000002.pdf" />
+    <None Include="views\pdf\WP-201412232234000000012.pdf" />
+    <None Include="views\pdf\WP-201412232234000000022.pdf" />
+    <None Include="views\pdf\WP-201412232238000000002.pdf" />
+    <None Include="views\pdf\WP-201412232238000000012.pdf" />
+    <None Include="views\pdf\WP-201412232238000000022.pdf" />
+    <None Include="views\pdf\WP-201412232243000000002.pdf" />
+    <None Include="views\pdf\WP-201412232243000000012.pdf" />
+    <None Include="views\pdf\WP-201412232243000000022.pdf" />
+    <None Include="views\pdf\WP-201412232246000000102.pdf" />
+    <None Include="views\pdf\WP-201412232246000000112.pdf" />
+    <None Include="views\pdf\WP-201412232246000000122.pdf" />
+    <None Include="views\pdf\WP-201412232349000000282.pdf" />
+    <None Include="views\pdf\WP-201412232349000000292.pdf" />
+    <None Include="views\pdf\WP-201412232349000000302.pdf" />
+    <None Include="views\pdf\WP-201412232354000000002.pdf" />
+    <None Include="views\pdf\WP-201412232354000000012.pdf" />
+    <None Include="views\pdf\WP-201412232354000000022.pdf" />
+    <None Include="views\pdf\WP-201412232355000000032.pdf" />
+    <None Include="views\pdf\WP-201412232355000000042.pdf" />
+    <None Include="views\pdf\WP-201412232355000000052.pdf" />
+    <None Include="views\pdf\WP-201412240001000000010.pdf" />
+    <None Include="views\pdf\WP-201412240001000000011.pdf" />
+    <None Include="views\pdf\WP-201412240001000000012.pdf" />
+    <None Include="views\pdf\WP-201412240001000000020.pdf" />
+    <None Include="views\pdf\WP-201412240001000000021.pdf" />
+    <None Include="views\pdf\WP-201412240001000000022.pdf" />
+    <None Include="views\pdf\WP-201412251924000000042.pdf" />
+    <None Include="views\pdf\WP-201412251924000000052.pdf" />
+    <None Include="views\pdf\WP-201412251924000000062.pdf" />
+    <None Include="views\pdf\WP-201412251936000000002.pdf" />
+    <None Include="views\pdf\WP-201412251936000000003.pdf" />
+    <None Include="views\pdf\WP-201412251936000000012.pdf" />
+    <None Include="views\pdf\WP-201412251936000000022.pdf" />
+    <None Include="views\pdf\WP-201412252133000000002.pdf" />
+    <None Include="views\pdf\WP-201412252133000000012.pdf" />
+    <None Include="views\pdf\WP-201412252133000000022.pdf" />
+    <None Include="views\pdf\WP-201412252153000000002.pdf" />
+    <None Include="views\pdf\WP-201412252153000000012.pdf" />
+    <None Include="views\pdf\WP-201412252153000000022.pdf" />
+    <None Include="views\pdf\WP-201412252155000000032.pdf" />
+    <None Include="views\pdf\WP-201412252155000000042.pdf" />
+    <None Include="views\pdf\WP-201412252155000000052.pdf" />
+    <None Include="views\pdf\WP-201412252226000000002.pdf" />
+    <None Include="views\pdf\WP-201412252226000000012.pdf" />
+    <None Include="views\pdf\WP-201412252226000000022.pdf" />
+    <None Include="views\pdf\WP-201412252233000000002.pdf" />
+    <None Include="views\pdf\WP-201412252233000000012.pdf" />
+    <None Include="views\pdf\WP-201412252233000000022.pdf" />
+    <None Include="views\pdf\WP-201412252241000000002.pdf" />
+    <None Include="views\pdf\WP-201412252241000000012.pdf" />
+    <None Include="views\pdf\WP-201412252241000000022.pdf" />
+    <None Include="views\pdf\WP-201412252337000000002.pdf" />
+    <None Include="views\pdf\WP-201412252337000000012.pdf" />
+    <None Include="views\pdf\WP-201412252337000000022.pdf" />
+    <None Include="views\pdf\WP-201412291501000000002.pdf" />
+    <None Include="views\pdf\WP-201412291501000000012.pdf" />
+    <None Include="views\pdf\WP-201412291501000000022.pdf" />
+    <None Include="views\pdf\WP-201412291503000000002.pdf" />
+    <None Include="views\pdf\WP-201412291503000000012.pdf" />
+    <None Include="views\pdf\WP-201412291503000000022.pdf" />
+    <None Include="views\pdf\WP-201412291506000000002.pdf" />
+    <None Include="views\pdf\WP-201412291506000000012.pdf" />
+    <None Include="views\pdf\WP-201412291506000000022.pdf" />
+    <None Include="views\pdf\WP-201412291512000000002.pdf" />
+    <None Include="views\pdf\WP-201412291512000000012.pdf" />
+    <None Include="views\pdf\WP-201412291512000000022.pdf" />
+    <None Include="views\pdf\WP-201412291512000000023.pdf" />
+    <None Include="views\pdf\WP-201412291600000000001.pdf" />
+    <None Include="views\pdf\WP-201412291600000000002.pdf" />
+    <None Include="views\pdf\WP-201412291600000000003.pdf" />
+    <None Include="views\pdf\WP-201412291600000000011.pdf" />
+    <None Include="views\pdf\WP-201412291600000000012.pdf" />
+    <None Include="views\pdf\WP-201412292032000000002.pdf" />
+    <None Include="views\pdf\WP-201412292032000000012.pdf" />
+    <None Include="views\pdf\WP-201412292032000000022.pdf" />
+    <None Include="views\pdf\WP-201412292032000000030.pdf" />
+    <None Include="views\pdf\WP-201412292032000000031.pdf" />
+    <None Include="views\pdf\WP-201412292032000000032.pdf" />
+    <None Include="views\pdf\WP-201412292220000000002.pdf" />
+    <None Include="views\pdf\WP-201412292220000000003.pdf" />
+    <None Include="views\pdf\WP-201412292220000000012.pdf" />
+    <None Include="views\pdf\WP-201412292220000000022.pdf" />
+    <None Include="views\pdf\WP-201412301057000000001.pdf" />
+    <None Include="views\pdf\WP-201412301057000000002.pdf" />
+    <None Include="views\pdf\WP-201412301057000000011.pdf" />
+    <None Include="views\pdf\WP-201412301057000000012.pdf" />
+    <None Include="views\pdf\WP-201412301059000000022.pdf" />
+    <None Include="views\pdf\WP-201412301059000000023.pdf" />
+    <None Include="views\pdf\WP-201412301059000000032.pdf" />
+    <None Include="views\pdf\WP-201412301059000000042.pdf" />
+    <None Include="views\pdf\WP-201412301107000000020.pdf" />
+    <None Include="views\pdf\WP-201412301107000000021.pdf" />
+    <None Include="views\pdf\WP-201412301107000000022.pdf" />
+    <None Include="views\pdf\WP-201412301107000000023.pdf" />
+    <None Include="views\pdf\WP-201412301107000000030.pdf" />
+    <None Include="views\pdf\WP-201412301107000000031.pdf" />
+    <None Include="views\pdf\WP-201412301107000000032.pdf" />
+    <None Include="views\pdf\WP-201412301107000000040.pdf" />
+    <None Include="views\pdf\WP-201412301107000000041.pdf" />
+    <None Include="views\pdf\WP-201412301107000000042.pdf" />
+    <None Include="views\pdf\WP-201412301107000000050.pdf" />
+    <None Include="views\pdf\WP-201412301107000000051.pdf" />
+    <None Include="views\pdf\WP-201412301107000000052.pdf" />
+    <None Include="views\pdf\WP-201412301110000000061.pdf" />
+    <None Include="views\pdf\WP-201412301110000000062.pdf" />
+    <None Include="views\pdf\WP-201412301110000000063.pdf" />
+    <None Include="views\pdf\WP-201412301110000000071.pdf" />
+    <None Include="views\pdf\WP-201412301110000000072.pdf" />
+    <None Include="views\pdf\WP-201412301121000000000.pdf" />
+    <None Include="views\pdf\WP-201412301121000000001.pdf" />
+    <None Include="views\pdf\WP-201412301121000000002.pdf" />
+    <None Include="views\pdf\WP-201412301121000000010.pdf" />
+    <None Include="views\pdf\WP-201412301121000000011.pdf" />
+    <None Include="views\pdf\WP-201412301121000000012.pdf" />
+    <None Include="views\pdf\WP-201412301121000000020.pdf" />
+    <None Include="views\pdf\WP-201412301121000000021.pdf" />
+    <None Include="views\pdf\WP-201412301121000000022.pdf" />
+    <None Include="views\pdf\WP-201412301126000000030.pdf" />
+    <None Include="views\pdf\WP-201412301126000000031.pdf" />
+    <None Include="views\pdf\WP-201412301126000000032.pdf" />
+    <None Include="views\pdf\WP-201412301257000000040.pdf" />
+    <None Include="views\pdf\WP-201412301257000000041.pdf" />
+    <None Include="views\pdf\WP-201412301257000000042.pdf" />
+    <None Include="views\pdf\WP-201412301259000000020.pdf" />
+    <None Include="views\pdf\WP-201412301259000000021.pdf" />
+    <None Include="views\pdf\WP-201412301259000000022.pdf" />
+    <None Include="views\pdf\WP-201412301301000000020.pdf" />
+    <None Include="views\pdf\WP-201412301301000000021.pdf" />
+    <None Include="views\pdf\WP-201412301301000000022.pdf" />
+    <None Include="views\pdf\WP-201412301303000000030.pdf" />
+    <None Include="views\pdf\WP-201412301303000000031.pdf" />
+    <None Include="views\pdf\WP-201412301303000000032.pdf" />
+    <None Include="views\pdf\WP-201412301303000000040.pdf" />
+    <None Include="views\pdf\WP-201412301303000000041.pdf" />
+    <None Include="views\pdf\WP-201412301303000000042.pdf" />
+    <None Include="views\pdf\WP-201412301303000000050.pdf" />
+    <None Include="views\pdf\WP-201412301303000000051.pdf" />
+    <None Include="views\pdf\WP-201412301303000000052.pdf" />
+    <None Include="views\pdf\WP-201412301532000000000.pdf" />
+    <None Include="views\pdf\WP-201412301532000000001.pdf" />
+    <None Include="views\pdf\WP-201412301532000000002.pdf" />
+    <None Include="views\pdf\WP-201412301635000000000.pdf" />
+    <None Include="views\pdf\WP-201412301635000000001.pdf" />
+    <None Include="views\pdf\WP-201412301635000000002.pdf" />
+    <None Include="views\pdf\WP-201412301635000000010.pdf" />
+    <None Include="views\pdf\WP-201412301635000000011.pdf" />
+    <None Include="views\pdf\WP-201412301635000000012.pdf" />
+    <None Include="views\pdf\WP-201412301635000000020.pdf" />
+    <None Include="views\pdf\WP-201412301635000000021.pdf" />
+    <None Include="views\pdf\WP-201412301635000000022.pdf" />
+    <None Include="views\pdf\WP-201412301645000000043.pdf" />
+    <None Include="views\pdf\WP-201412301701000000000.pdf" />
+    <None Include="views\pdf\WP-201412301701000000001.pdf" />
+    <None Include="views\pdf\WP-201412301701000000002.pdf" />
+    <None Include="views\pdf\WP-201412301701000000010.pdf" />
+    <None Include="views\pdf\WP-201412301701000000011.pdf" />
+    <None Include="views\pdf\WP-201412301701000000012.pdf" />
+    <None Include="views\pdf\WP-201412301701000000020.pdf" />
+    <None Include="views\pdf\WP-201412301701000000021.pdf" />
+    <None Include="views\pdf\WP-201412301701000000022.pdf" />
+    <None Include="views\pdf\WP-201412301704000000030.pdf" />
+    <None Include="views\pdf\WP-201412301704000000031.pdf" />
+    <None Include="views\pdf\WP-201412301704000000032.pdf" />
+    <None Include="views\pdf\WP-201412301704000000040.pdf" />
+    <None Include="views\pdf\WP-201412301704000000041.pdf" />
+    <None Include="views\pdf\WP-201412301704000000042.pdf" />
+    <None Include="views\pdf\WP-201412301704000000050.pdf" />
+    <None Include="views\pdf\WP-201412301704000000051.pdf" />
+    <None Include="views\pdf\WP-201412301704000000052.pdf" />
+    <None Include="views\pdf\WP-201412301704000000060.pdf" />
+    <None Include="views\pdf\WP-201412301704000000061.pdf" />
+    <None Include="views\pdf\WP-201412301704000000062.pdf" />
+    <None Include="views\pdf\WP-201412301705000000071.pdf" />
+    <None Include="views\pdf\WP-201412301705000000072.pdf" />
+    <None Include="views\pdf\WP-201412301705000000081.pdf" />
+    <None Include="views\pdf\WP-201412301705000000082.pdf" />
+    <None Include="views\pdf\WP-201412311654000000000.pdf" />
+    <None Include="views\pdf\WP-201412311654000000001.pdf" />
+    <None Include="views\pdf\WP-201412311654000000002.pdf" />
+    <None Include="views\pdf\WP-201412311654000000010.pdf" />
+    <None Include="views\pdf\WP-201412311654000000011.pdf" />
+    <None Include="views\pdf\WP-201412311654000000012.pdf" />
+    <None Include="views\pdf\WP-201412311654000000020.pdf" />
+    <None Include="views\pdf\WP-201412311654000000021.pdf" />
+    <None Include="views\pdf\WP-201412311654000000022.pdf" />
+    <None Include="views\pdf\WP-201501012107000000000.pdf" />
+    <None Include="views\pdf\WP-201501012107000000001.pdf" />
+    <None Include="views\pdf\WP-201501012107000000002.pdf" />
+    <None Include="views\pdf\WP-201501012107000000010.pdf" />
+    <None Include="views\pdf\WP-201501012107000000011.pdf" />
+    <None Include="views\pdf\WP-201501012107000000012.pdf" />
+    <None Include="views\pdf\WP-201501012107000000020.pdf" />
+    <None Include="views\pdf\WP-201501012107000000021.pdf" />
+    <None Include="views\pdf\WP-201501012107000000022.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="control\AccountBalanceRequest.cs" />
+    <Compile Include="control\AccountBalanceResponse.cs" />
+    <Compile Include="control\BarCode.cs" />
+    <Compile Include="control\ChangePwdRequest.cs" />
+    <Compile Include="control\ChangePwdResponse.cs" />
+    <Compile Include="control\CollectionPlusLabel.cs" />
+    <Compile Include="control\CommonMsg.cs" />
+    <Compile Include="control\EMSOrderNoDAO.cs" />
+    <Compile Include="control\Hz2Py.cs" />
+    <Compile Include="control\InterFaceQuote.cs" />
+    <Compile Include="control\LocalOrder.cs" />
+    <Compile Include="control\LocalOrderDAO.cs" />
+    <Compile Include="control\LocalPackage.cs" />
+    <Compile Include="control\LocalPackageDAO.cs" />
+    <Compile Include="control\LoginRequest.cs" />
+    <Compile Include="control\LoginResponse.cs" />
+    <Compile Include="control\OrderRequest.cs" />
+    <Compile Include="control\OrderResponse.cs" />
+    <Compile Include="control\PaymentRequest.cs" />
+    <Compile Include="control\PaymentResponse.cs" />
+    <Compile Include="control\PdfPrint.cs" />
+    <Compile Include="control\PFCN21.cs" />
+    <Compile Include="control\PFCommercial.cs" />
+    <Compile Include="control\PFLabel.cs" />
+    <Compile Include="control\PinYinHelpers.cs" />
+    <Compile Include="control\QuotaRequest.cs" />
+    <Compile Include="control\QuotaResponse.cs" />
+    <Compile Include="control\RegisterRequest.cs" />
+    <Compile Include="control\RegistResponse.cs" />
+    <Compile Include="control\UkmailLabel.cs" />
+    <Compile Include="control\Util.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="logical\common\PackageCartInfo.cs" />
+    <Compile Include="manage-system\auto-order-detail-info.aspx.cs">
+      <DependentUpon>auto-order-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\auto-order-detail-info.aspx.designer.cs">
+      <DependentUpon>auto-order-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\check-order-detail-info.aspx.cs">
+      <DependentUpon>check-order-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\check-order-detail-info.aspx.designer.cs">
+      <DependentUpon>check-order-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\check-payback-apply.aspx.cs">
+      <DependentUpon>check-payback-apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\check-payback-apply.aspx.designer.cs">
+      <DependentUpon>check-payback-apply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-interface-order-by-time.aspx.cs">
+      <DependentUpon>check-interface-order-by-time.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-interface-order-by-time.aspx.designer.cs">
+      <DependentUpon>check-interface-order-by-time.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-local-order-by-name.aspx.cs">
+      <DependentUpon>check-local-order-by-name.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-local-order-by-name.aspx.designer.cs">
+      <DependentUpon>check-local-order-by-name.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-local-order-by-number.aspx.cs">
+      <DependentUpon>check-local-order-by-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-local-order-by-number.aspx.designer.cs">
+      <DependentUpon>check-local-order-by-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-local-order-by-time.aspx.cs">
+      <DependentUpon>check-local-order-by-time.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-local-order-by-time.aspx.designer.cs">
+      <DependentUpon>check-local-order-by-time.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\ems-last-order-number-check.aspx.cs">
+      <DependentUpon>ems-last-order-number-check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\ems-last-order-number-check.aspx.designer.cs">
+      <DependentUpon>ems-last-order-number-check.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\import-ems-order-number.aspx.cs">
+      <DependentUpon>import-ems-order-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\import-ems-order-number.aspx.designer.cs">
+      <DependentUpon>import-ems-order-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\import-ems-track-info.aspx.cs">
+      <DependentUpon>import-ems-track-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\import-ems-track-info.aspx.designer.cs">
+      <DependentUpon>import-ems-track-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\charge-by-card.aspx.cs">
+      <DependentUpon>charge-by-card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\charge-by-card.aspx.designer.cs">
+      <DependentUpon>charge-by-card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\user-account-balance-check.aspx.cs">
+      <DependentUpon>user-account-balance-check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\user-account-balance-check.aspx.designer.cs">
+      <DependentUpon>user-account-balance-check.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\user-account-trans-info.aspx.cs">
+      <DependentUpon>user-account-trans-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\user-account-trans-info.aspx.designer.cs">
+      <DependentUpon>user-account-trans-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\user-debt-record-info.aspx.cs">
+      <DependentUpon>user-debt-record-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\user-debt-record-info.aspx.designer.cs">
+      <DependentUpon>user-debt-record-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\user-detail-info.aspx.cs">
+      <DependentUpon>user-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\user-detail-info.aspx.designer.cs">
+      <DependentUpon>user-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\reception-stage\home-old.Master.cs">
+      <DependentUpon>home-old.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\reception-stage\home-old.Master.designer.cs">
+      <DependentUpon>home-old.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShipServiceForApp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ShipService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="views\charge-failed.aspx.cs">
+      <DependentUpon>charge-failed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\charge-failed.aspx.designer.cs">
+      <DependentUpon>charge-failed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\charge-success.aspx.cs">
+      <DependentUpon>charge-success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\charge-success.aspx.designer.cs">
+      <DependentUpon>charge-success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\exception\order-number-error.aspx.cs">
+      <DependentUpon>order-number-error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\exception\order-number-error.aspx.designer.cs">
+      <DependentUpon>order-number-error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\Handler1.ashx.cs">
+      <DependentUpon>Handler1.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\batch-import.aspx.cs">
+      <DependentUpon>batch-import.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\batch-import.aspx.designer.cs">
+      <DependentUpon>batch-import.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="control\AddressDAO.cs" />
+    <Compile Include="control\AddressInfoDAO.cs" />
+    <Compile Include="control\AllRateDAO.cs" />
+    <Compile Include="control\AutoOrderDAO.cs" />
+    <Compile Include="control\AutoOrderListDAO.cs" />
+    <Compile Include="control\BatchQuoteDAO.cs" />
+    <Compile Include="control\CanPostDAO.cs" />
+    <Compile Include="control\CheckLogin.cs" />
+    <Compile Include="control\CIF_SB.cs" />
+    <Compile Include="control\Code128B.cs" />
+    <Compile Include="control\DBConn.cs" />
+    <Compile Include="control\DBOperateCommon.cs" />
+    <Compile Include="control\DeliveryRateDAO.cs" />
+    <Compile Include="control\InnerPackageDAO.cs" />
+    <Compile Include="control\LocalPickRateDAO.cs" />
+    <Compile Include="control\MyAccountDAO.cs" />
+    <Compile Include="control\MyAccountTransDAO.cs" />
+    <Compile Include="control\OrderDAO.cs" />
+    <Compile Include="control\PackageDAO.cs" />
+    <Compile Include="control\PayBackApplyDAO.cs" />
+    <Compile Include="control\PinyinHelper.cs" />
+    <Compile Include="control\PosCalculate.cs" />
+    <Compile Include="control\PostNLDiscountDAO.cs" />
+    <Compile Include="control\Quote.cs" />
+    <Compile Include="control\PostageDAO.cs" />
+    <Compile Include="control\ReceiveAddressDAO.cs" />
+    <Compile Include="control\ReturnOrderListDAO.cs" />
+    <Compile Include="control\SendAddressDAO.cs" />
+    <Compile Include="control\SetEMSRateForUserDAO.cs" />
+    <Compile Include="control\SetPFGPRCRateForUserDAO.cs" />
+    <Compile Include="control\SetPFGPRDRateForUserDAO.cs" />
+    <Compile Include="control\SetPFIPECollectionRateForUserDAO.cs" />
+    <Compile Include="control\SetPFIPEDepotRateForUserDAO.cs" />
+    <Compile Include="control\SetPFIPEPolRateForUserDAO.cs" />
+    <Compile Include="control\SetPFIPETrailerRateForUserDAO.cs" />
+    <Compile Include="control\SetPostNLRateForUser.cs" />
+    <Compile Include="control\SetPostNLRateForUserDAO.cs" />
+    <Compile Include="control\StaffDAO.cs" />
+    <Compile Include="control\UserDAO.cs" />
+    <Compile Include="control\UserDebtDAO.cs" />
+    <Compile Include="control\UserDebtTransDAO.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logical\common\AllPostNLRate.cs" />
+    <Compile Include="logical\common\AllRate.cs" />
+    <Compile Include="logical\common\AutoOrder.cs" />
+    <Compile Include="logical\common\AutoOrderList.cs" />
+    <Compile Include="logical\common\BatchOrder.cs" />
+    <Compile Include="logical\common\EMSRate.cs" />
+    <Compile Include="logical\common\InnerLocalPackage.cs" />
+    <Compile Include="logical\common\PackageMeasure.cs" />
+    <Compile Include="logical\common\Order.cs" />
+    <Compile Include="logical\common\Package.cs" />
+    <Compile Include="logical\common\PackagesToSameAddress.cs" />
+    <Compile Include="logical\common\PayBackApply.cs" />
+    <Compile Include="logical\common\Postage.cs" />
+    <Compile Include="logical\common\ReturnOrderList.cs" />
+    <Compile Include="logical\common\SendEmail.cs" />
+    <Compile Include="logical\common\Staff.cs" />
+    <Compile Include="logical\user\Address.cs" />
+    <Compile Include="logical\user\MyAccount.cs" />
+    <Compile Include="logical\user\MyAccountTrans.cs" />
+    <Compile Include="logical\user\ReceiveAddress.cs" />
+    <Compile Include="logical\user\SendAddress.cs" />
+    <Compile Include="logical\user\User.cs" />
+    <Compile Include="logical\user\UserDebt.cs" />
+    <Compile Include="logical\user\UserDebtTrans.cs" />
+    <Compile Include="logical\user\UserRate.cs" />
+    <Compile Include="manage-system\error-page.aspx.cs">
+      <DependentUpon>error-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\error-page.aspx.designer.cs">
+      <DependentUpon>error-page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-order-by-name.aspx.cs">
+      <DependentUpon>check-order-by-name.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-order-by-name.aspx.designer.cs">
+      <DependentUpon>check-order-by-name.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-order-by-number.aspx.cs">
+      <DependentUpon>check-order-by-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-order-by-number.aspx.designer.cs">
+      <DependentUpon>check-order-by-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-excel-order-by-time.aspx.cs">
+      <DependentUpon>check-excel-order-by-time.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-excel-order-by-time.aspx.designer.cs">
+      <DependentUpon>check-excel-order-by-time.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\frame\check-user-info.aspx.cs">
+      <DependentUpon>check-user-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\frame\check-user-info.aspx.designer.cs">
+      <DependentUpon>check-user-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-account-management.aspx.cs">
+      <DependentUpon>manager-account-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-account-management.aspx.designer.cs">
+      <DependentUpon>manager-account-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-frame\change-person-info.aspx.cs">
+      <DependentUpon>change-person-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-frame\change-person-info.aspx.designer.cs">
+      <DependentUpon>change-person-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-frame\manager-change-password.aspx.cs">
+      <DependentUpon>manager-change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-frame\manager-change-password.aspx.designer.cs">
+      <DependentUpon>manager-change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-home.aspx.cs">
+      <DependentUpon>manager-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-home.aspx.designer.cs">
+      <DependentUpon>manager-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-login.aspx.cs">
+      <DependentUpon>manager-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-login.aspx.designer.cs">
+      <DependentUpon>manager-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-order-management.aspx.cs">
+      <DependentUpon>manager-order-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-order-management.aspx.designer.cs">
+      <DependentUpon>manager-order-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\manager-staff-management.aspx.cs">
+      <DependentUpon>manager-staff-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\manager-staff-management.aspx.designer.cs">
+      <DependentUpon>manager-staff-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\order-detail-info.aspx.cs">
+      <DependentUpon>order-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\order-detail-info.aspx.designer.cs">
+      <DependentUpon>order-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\staff-account-management.aspx.cs">
+      <DependentUpon>staff-account-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\staff-account-management.aspx.designer.cs">
+      <DependentUpon>staff-account-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\staff-frame\change-password.aspx.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\staff-frame\change-password.aspx.designer.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\staff-frame\change-person-info.aspx.cs">
+      <DependentUpon>change-person-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\staff-frame\change-person-info.aspx.designer.cs">
+      <DependentUpon>change-person-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\staff-frame\repay-apply.aspx.cs">
+      <DependentUpon>repay-apply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\staff-frame\repay-apply.aspx.designer.cs">
+      <DependentUpon>repay-apply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\staff-home.aspx.cs">
+      <DependentUpon>staff-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\staff-home.aspx.designer.cs">
+      <DependentUpon>staff-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\staff-order-management.aspx.cs">
+      <DependentUpon>staff-order-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\staff-order-management.aspx.designer.cs">
+      <DependentUpon>staff-order-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-account.aspx.cs">
+      <DependentUpon>super-admin-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-account.aspx.designer.cs">
+      <DependentUpon>super-admin-account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-finance-management.aspx.cs">
+      <DependentUpon>super-admin-finance-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-finance-management.aspx.designer.cs">
+      <DependentUpon>super-admin-finance-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-ems.aspx.cs">
+      <DependentUpon>add-rate-type-ems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-ems.aspx.designer.cs">
+      <DependentUpon>add-rate-type-ems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-gpr-collection.aspx.cs">
+      <DependentUpon>add-rate-type-pf-gpr-collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-gpr-collection.aspx.designer.cs">
+      <DependentUpon>add-rate-type-pf-gpr-collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-gpr-delivery.aspx.cs">
+      <DependentUpon>add-rate-type-pf-gpr-delivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-gpr-delivery.aspx.designer.cs">
+      <DependentUpon>add-rate-type-pf-gpr-delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-collection.aspx.cs">
+      <DependentUpon>add-rate-type-pf-ipe-collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-collection.aspx.designer.cs">
+      <DependentUpon>add-rate-type-pf-ipe-collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-depot.aspx.cs">
+      <DependentUpon>add-rate-type-pf-ipe-depot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-depot.aspx.designer.cs">
+      <DependentUpon>add-rate-type-pf-ipe-depot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-pol.aspx.cs">
+      <DependentUpon>add-rate-type-pf-ipe-pol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-pol.aspx.designer.cs">
+      <DependentUpon>add-rate-type-pf-ipe-pol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-trailer.aspx.cs">
+      <DependentUpon>add-rate-type-pf-ipe-trailer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-pf-ipe-trailer.aspx.designer.cs">
+      <DependentUpon>add-rate-type-pf-ipe-trailer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-postnl.aspx.cs">
+      <DependentUpon>add-rate-type-postnl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-rate-type-postnl.aspx.designer.cs">
+      <DependentUpon>add-rate-type-postnl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-staff.aspx.cs">
+      <DependentUpon>add-staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\add-staff.aspx.designer.cs">
+      <DependentUpon>add-staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\admin-change-password.aspx.cs">
+      <DependentUpon>admin-change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\admin-change-password.aspx.designer.cs">
+      <DependentUpon>admin-change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\charge-for-user.aspx.cs">
+      <DependentUpon>charge-for-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\charge-for-user.aspx.designer.cs">
+      <DependentUpon>charge-for-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\charge-repay-record.aspx.cs">
+      <DependentUpon>charge-repay-record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\charge-repay-record.aspx.designer.cs">
+      <DependentUpon>charge-repay-record.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\check-all-user-rate-type.aspx.cs">
+      <DependentUpon>check-all-user-rate-type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\check-all-user-rate-type.aspx.designer.cs">
+      <DependentUpon>check-all-user-rate-type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\check-debt-user.aspx.cs">
+      <DependentUpon>check-debt-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\check-debt-user.aspx.designer.cs">
+      <DependentUpon>check-debt-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\check-staff.aspx.cs">
+      <DependentUpon>check-staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\check-staff.aspx.designer.cs">
+      <DependentUpon>check-staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\ems-money.aspx.cs">
+      <DependentUpon>ems-money.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\ems-money.aspx.designer.cs">
+      <DependentUpon>ems-money.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\payback-apply-info.aspx.cs">
+      <DependentUpon>payback-apply-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\payback-apply-info.aspx.designer.cs">
+      <DependentUpon>payback-apply-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\payback-apply-unpass.aspx.cs">
+      <DependentUpon>payback-apply-unpass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\payback-apply-unpass.aspx.designer.cs">
+      <DependentUpon>payback-apply-unpass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\pf-money.aspx.cs">
+      <DependentUpon>pf-money.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\pf-money.aspx.designer.cs">
+      <DependentUpon>pf-money.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\repayment-for-user.aspx.cs">
+      <DependentUpon>repayment-for-user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\repayment-for-user.aspx.designer.cs">
+      <DependentUpon>repayment-for-user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-local-pick-up-rate.aspx.cs">
+      <DependentUpon>set-local-pick-up-rate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-local-pick-up-rate.aspx.designer.cs">
+      <DependentUpon>set-local-pick-up-rate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-ems.aspx.cs">
+      <DependentUpon>set-rate-ems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-ems.aspx.designer.cs">
+      <DependentUpon>set-rate-ems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-gpr-collection.aspx.cs">
+      <DependentUpon>set-rate-pf-gpr-collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-gpr-collection.aspx.designer.cs">
+      <DependentUpon>set-rate-pf-gpr-collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-gpr-delivery.aspx.cs">
+      <DependentUpon>set-rate-pf-gpr-delivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-gpr-delivery.aspx.designer.cs">
+      <DependentUpon>set-rate-pf-gpr-delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-collection.aspx.cs">
+      <DependentUpon>set-rate-pf-ipe-collection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-collection.aspx.designer.cs">
+      <DependentUpon>set-rate-pf-ipe-collection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-depot.aspx.cs">
+      <DependentUpon>set-rate-pf-ipe-depot.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-depot.aspx.designer.cs">
+      <DependentUpon>set-rate-pf-ipe-depot.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-pol.aspx.cs">
+      <DependentUpon>set-rate-pf-ipe-pol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-pol.aspx.designer.cs">
+      <DependentUpon>set-rate-pf-ipe-pol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-trailer.aspx.cs">
+      <DependentUpon>set-rate-pf-ipe-trailer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-pf-ipe-trailer.aspx.designer.cs">
+      <DependentUpon>set-rate-pf-ipe-trailer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-postnl.aspx.cs">
+      <DependentUpon>set-rate-postnl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-frame\set-rate-postnl.aspx.designer.cs">
+      <DependentUpon>set-rate-postnl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-home.aspx.cs">
+      <DependentUpon>super-admin-home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-home.aspx.designer.cs">
+      <DependentUpon>super-admin-home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-order-management.aspx.cs">
+      <DependentUpon>super-admin-order-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-order-management.aspx.designer.cs">
+      <DependentUpon>super-admin-order-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="manage-system\super-admin-staff-management.aspx.cs">
+      <DependentUpon>super-admin-staff-management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="manage-system\super-admin-staff-management.aspx.designer.cs">
+      <DependentUpon>super-admin-staff-management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\home.Master.cs">
+      <DependentUpon>home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\home.Master.designer.cs">
+      <DependentUpon>home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\manager.Master.cs">
+      <DependentUpon>manager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\manager.Master.designer.cs">
+      <DependentUpon>manager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\staff.Master.cs">
+      <DependentUpon>staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\back-stage\staff.Master.designer.cs">
+      <DependentUpon>staff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\reception-stage\batch.Master.cs">
+      <DependentUpon>batch.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\reception-stage\batch.Master.designer.cs">
+      <DependentUpon>batch.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage\reception-stage\home.Master.cs">
+      <DependentUpon>home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage\reception-stage\home.Master.designer.cs">
+      <DependentUpon>home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BarcodeService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LabelTest1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\activity-area\ally-plan.aspx.cs">
+      <DependentUpon>ally-plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\activity-area\ally-plan.aspx.designer.cs">
+      <DependentUpon>ally-plan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\activity-area\custom-point.aspx.cs">
+      <DependentUpon>custom-point.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\activity-area\custom-point.aspx.designer.cs">
+      <DependentUpon>custom-point.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\activity-area\custom-red-packet.aspx.cs">
+      <DependentUpon>custom-red-packet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\activity-area\custom-red-packet.aspx.designer.cs">
+      <DependentUpon>custom-red-packet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\activity-area\free-delivery-for-first.aspx.cs">
+      <DependentUpon>free-delivery-for-first.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\activity-area\free-delivery-for-first.aspx.designer.cs">
+      <DependentUpon>free-delivery-for-first.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\ally-plan.aspx.cs">
+      <DependentUpon>ally-plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\ally-plan.aspx.designer.cs">
+      <DependentUpon>ally-plan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\batch-import-old.aspx.cs">
+      <DependentUpon>batch-import-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\batch-import-old.aspx.designer.cs">
+      <DependentUpon>batch-import-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\batch-order.aspx.cs">
+      <DependentUpon>batch-order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\batch-order.aspx.designer.cs">
+      <DependentUpon>batch-order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\batch-purchase-process.aspx.cs">
+      <DependentUpon>batch-purchase-process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\batch-purchase-process.aspx.designer.cs">
+      <DependentUpon>batch-purchase-process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\exception\error-page.aspx.cs">
+      <DependentUpon>error-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\exception\error-page.aspx.designer.cs">
+      <DependentUpon>error-page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\batch-uk-pick-up.aspx.cs">
+      <DependentUpon>batch-uk-pick-up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\batch-uk-pick-up.aspx.designer.cs">
+      <DependentUpon>batch-uk-pick-up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\local-order-pick-up.aspx.cs">
+      <DependentUpon>local-order-pick-up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\local-order-pick-up.aspx.designer.cs">
+      <DependentUpon>local-order-pick-up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\local-order-process.aspx.cs">
+      <DependentUpon>local-order-process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\local-order-process.aspx.designer.cs">
+      <DependentUpon>local-order-process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\my-local-pick-up-cart.aspx.cs">
+      <DependentUpon>my-local-pick-up-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\my-local-pick-up-cart.aspx.designer.cs">
+      <DependentUpon>my-local-pick-up-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\order-label.aspx.cs">
+      <DependentUpon>order-label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\order-label.aspx.designer.cs">
+      <DependentUpon>order-label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\order-pay.aspx.cs">
+      <DependentUpon>order-pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\order-pay.aspx.designer.cs">
+      <DependentUpon>order-pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\pay-success.aspx.cs">
+      <DependentUpon>pay-success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\pay-success.aspx.designer.cs">
+      <DependentUpon>pay-success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\paycard.aspx.cs">
+      <DependentUpon>paycard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\paycard.aspx.designer.cs">
+      <DependentUpon>paycard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\paypal.aspx.cs">
+      <DependentUpon>paypal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\paypal.aspx.designer.cs">
+      <DependentUpon>paypal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\receive-addr-pop.aspx.cs">
+      <DependentUpon>receive-addr-pop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\receive-addr-pop.aspx.designer.cs">
+      <DependentUpon>receive-addr-pop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\ReceiveAdress.ashx.cs">
+      <DependentUpon>ReceiveAdress.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\send-addr-pop.aspx.cs">
+      <DependentUpon>send-addr-pop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\send-addr-pop.aspx.designer.cs">
+      <DependentUpon>send-addr-pop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\simple-batch-uk-pick-up.aspx.cs">
+      <DependentUpon>simple-batch-uk-pick-up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\simple-batch-uk-pick-up.aspx.designer.cs">
+      <DependentUpon>simple-batch-uk-pick-up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\purchase-process.aspx.cs">
+      <DependentUpon>purchase-process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\purchase-process.aspx.designer.cs">
+      <DependentUpon>purchase-process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\uk-land-transport.aspx.cs">
+      <DependentUpon>uk-land-transport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\uk-land-transport.aspx.designer.cs">
+      <DependentUpon>uk-land-transport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\my-local-pick-up-cart.aspx.cs">
+      <DependentUpon>my-local-pick-up-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\my-local-pick-up-cart.aspx.designer.cs">
+      <DependentUpon>my-local-pick-up-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\local-order-process.aspx.cs">
+      <DependentUpon>local-order-process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\local-order-process.aspx.designer.cs">
+      <DependentUpon>local-order-process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-account.aspx.cs">
+      <DependentUpon>my-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-account.aspx.designer.cs">
+      <DependentUpon>my-account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-account-old.aspx.cs">
+      <DependentUpon>my-account-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-account-old.aspx.designer.cs">
+      <DependentUpon>my-account-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-cart-order-detail-info.aspx.cs">
+      <DependentUpon>my-cart-order-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-cart-order-detail-info.aspx.designer.cs">
+      <DependentUpon>my-cart-order-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-order-detail-info.aspx.cs">
+      <DependentUpon>my-order-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-order-detail-info.aspx.designer.cs">
+      <DependentUpon>my-order-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-shopping-cart-old.aspx.cs">
+      <DependentUpon>my-shopping-cart-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-shopping-cart-old.aspx.designer.cs">
+      <DependentUpon>my-shopping-cart-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-shopping-cart.aspx.cs">
+      <DependentUpon>my-shopping-cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-shopping-cart.aspx.designer.cs">
+      <DependentUpon>my-shopping-cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\online-shopping\milkpowder-checkout.aspx.cs">
+      <DependentUpon>milkpowder-checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\online-shopping\milkpowder-checkout.aspx.designer.cs">
+      <DependentUpon>milkpowder-checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\order-label.aspx.cs">
+      <DependentUpon>order-label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\order-label.aspx.designer.cs">
+      <DependentUpon>order-label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\order-pay.aspx.cs">
+      <DependentUpon>order-pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\order-pay.aspx.designer.cs">
+      <DependentUpon>order-pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\pay-success.aspx.cs">
+      <DependentUpon>pay-success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\pay-success.aspx.designer.cs">
+      <DependentUpon>pay-success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\paycard-charge.aspx.cs">
+      <DependentUpon>paycard-charge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\paycard-charge.aspx.designer.cs">
+      <DependentUpon>paycard-charge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\Paycard.aspx.cs">
+      <DependentUpon>Paycard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\Paycard.aspx.designer.cs">
+      <DependentUpon>Paycard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\paypal-charge.aspx.cs">
+      <DependentUpon>paypal-charge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\paypal-charge.aspx.designer.cs">
+      <DependentUpon>paypal-charge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\Paypal.aspx.cs">
+      <DependentUpon>Paypal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\Paypal.aspx.designer.cs">
+      <DependentUpon>Paypal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\simple-batch-order.aspx.cs">
+      <DependentUpon>simple-batch-order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\simple-batch-order.aspx.designer.cs">
+      <DependentUpon>simple-batch-order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\simple-batch-purchase-process.aspx.cs">
+      <DependentUpon>simple-batch-purchase-process.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\simple-batch-purchase-process.aspx.designer.cs">
+      <DependentUpon>simple-batch-purchase-process.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\postnl.aspx.cs">
+      <DependentUpon>postnl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\postnl.aspx.designer.cs">
+      <DependentUpon>postnl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\online-shopping\carseat-checkout.aspx.cs">
+      <DependentUpon>carseat-checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\online-shopping\carseat-checkout.aspx.designer.cs">
+      <DependentUpon>carseat-checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\code.aspx.cs">
+      <DependentUpon>code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\code.aspx.designer.cs">
+      <DependentUpon>code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\contact-us.aspx.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\contact-us.aspx.designer.cs">
+      <DependentUpon>contact-us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\custom-point.aspx.cs">
+      <DependentUpon>custom-point.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\custom-point.aspx.designer.cs">
+      <DependentUpon>custom-point.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\custom-red-packet.aspx.cs">
+      <DependentUpon>custom-red-packet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\custom-red-packet.aspx.designer.cs">
+      <DependentUpon>custom-red-packet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\ems-direct.aspx.cs">
+      <DependentUpon>ems-direct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\ems-direct.aspx.designer.cs">
+      <DependentUpon>ems-direct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\free-delivery-for-first.aspx.cs">
+      <DependentUpon>free-delivery-for-first.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\free-delivery-for-first.aspx.designer.cs">
+      <DependentUpon>free-delivery-for-first.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\frequent-ask-question.aspx.cs">
+      <DependentUpon>frequent-ask-question.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\frequent-ask-question.aspx.designer.cs">
+      <DependentUpon>frequent-ask-question.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\online-shopping\luggage-box.aspx.cs">
+      <DependentUpon>luggage-box.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\online-shopping\luggage-box.aspx.designer.cs">
+      <DependentUpon>luggage-box.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\online-shopping\milkpowder-sells.aspx.cs">
+      <DependentUpon>milkpowder-sells.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\online-shopping\milkpowder-sells.aspx.designer.cs">
+      <DependentUpon>milkpowder-sells.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\my-goods.aspx.cs">
+      <DependentUpon>my-goods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\my-goods.aspx.designer.cs">
+      <DependentUpon>my-goods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\online-shopping\supply-check-out.aspx.cs">
+      <DependentUpon>supply-check-out.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\online-shopping\supply-check-out.aspx.designer.cs">
+      <DependentUpon>supply-check-out.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\repeat-pay.aspx.cs">
+      <DependentUpon>repeat-pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\repeat-pay.aspx.designer.cs">
+      <DependentUpon>repeat-pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\sea-transport\uk-shopping-guide.aspx.cs">
+      <DependentUpon>uk-shopping-guide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\sea-transport\uk-shopping-guide.aspx.designer.cs">
+      <DependentUpon>uk-shopping-guide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\order-detail-info.aspx.cs">
+      <DependentUpon>order-detail-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\order-detail-info.aspx.designer.cs">
+      <DependentUpon>order-detail-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\order-tracking.aspx.cs">
+      <DependentUpon>order-tracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\order-tracking.aspx.designer.cs">
+      <DependentUpon>order-tracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\package-advice.aspx.cs">
+      <DependentUpon>package-advice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\package-advice.aspx.designer.cs">
+      <DependentUpon>package-advice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\parcelforce-economy.aspx.cs">
+      <DependentUpon>parcelforce-economy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\parcelforce-economy.aspx.designer.cs">
+      <DependentUpon>parcelforce-economy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\inter-express\parcelforce-priority.aspx.cs">
+      <DependentUpon>parcelforce-priority.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\inter-express\parcelforce-priority.aspx.designer.cs">
+      <DependentUpon>parcelforce-priority.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\online-quote.aspx.cs">
+      <DependentUpon>online-quote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\online-quote.aspx.designer.cs">
+      <DependentUpon>online-quote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\regist.aspx.cs">
+      <DependentUpon>regist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\regist.aspx.designer.cs">
+      <DependentUpon>regist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\reset-password.aspx.cs">
+      <DependentUpon>reset-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\reset-password.aspx.designer.cs">
+      <DependentUpon>reset-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\order-label.aspx.cs">
+      <DependentUpon>order-label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\order-label.aspx.designer.cs">
+      <DependentUpon>order-label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\order-pay.aspx.cs">
+      <DependentUpon>order-pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\order-pay.aspx.designer.cs">
+      <DependentUpon>order-pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\pay-by-wm-account.aspx.cs">
+      <DependentUpon>pay-by-wm-account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\pay-by-wm-account.aspx.designer.cs">
+      <DependentUpon>pay-by-wm-account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\pay-success.aspx.cs">
+      <DependentUpon>pay-success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\pay-success.aspx.designer.cs">
+      <DependentUpon>pay-success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\paycard.aspx.cs">
+      <DependentUpon>paycard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\paycard.aspx.designer.cs">
+      <DependentUpon>paycard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\paypal.aspx.cs">
+      <DependentUpon>paypal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\paypal.aspx.designer.cs">
+      <DependentUpon>paypal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\repeat-pay.aspx.cs">
+      <DependentUpon>repeat-pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\repeat-pay.aspx.designer.cs">
+      <DependentUpon>repeat-pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\select-charge-way.aspx.cs">
+      <DependentUpon>select-charge-way.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\select-charge-way.aspx.designer.cs">
+      <DependentUpon>select-charge-way.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\account-charge.aspx.cs">
+      <DependentUpon>account-charge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\account-charge.aspx.designer.cs">
+      <DependentUpon>account-charge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\change-password.aspx.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\change-password.aspx.designer.cs">
+      <DependentUpon>change-password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\change-person-info.aspx.cs">
+      <DependentUpon>change-person-info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\change-person-info.aspx.designer.cs">
+      <DependentUpon>change-person-info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\check-local-order-by-number.aspx.cs">
+      <DependentUpon>check-local-order-by-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\check-local-order-by-number.aspx.designer.cs">
+      <DependentUpon>check-local-order-by-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\check-local-order-by-time.aspx.cs">
+      <DependentUpon>check-local-order-by-time.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\check-local-order-by-time.aspx.designer.cs">
+      <DependentUpon>check-local-order-by-time.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-number-old.aspx.cs">
+      <DependentUpon>check-order-by-number-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-number-old.aspx.designer.cs">
+      <DependentUpon>check-order-by-number-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-number.aspx.cs">
+      <DependentUpon>check-order-by-number.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-number.aspx.designer.cs">
+      <DependentUpon>check-order-by-number.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-time-old.aspx.cs">
+      <DependentUpon>check-order-by-time-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-time-old.aspx.designer.cs">
+      <DependentUpon>check-order-by-time-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-time.aspx.cs">
+      <DependentUpon>check-order-by-time.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\check-order-by-time.aspx.designer.cs">
+      <DependentUpon>check-order-by-time.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\local-order.aspx.cs">
+      <DependentUpon>local-order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\local-order.aspx.designer.cs">
+      <DependentUpon>local-order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\my-account-balance.aspx.cs">
+      <DependentUpon>my-account-balance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\my-account-balance.aspx.designer.cs">
+      <DependentUpon>my-account-balance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\my-account-trans.aspx.cs">
+      <DependentUpon>my-account-trans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\my-account-trans.aspx.designer.cs">
+      <DependentUpon>my-account-trans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\order-local-pick-up.aspx.cs">
+      <DependentUpon>order-local-pick-up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\order-local-pick-up.aspx.designer.cs">
+      <DependentUpon>order-local-pick-up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\order-need-to-get-label.aspx.cs">
+      <DependentUpon>order-need-to-get-label.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\order-need-to-get-label.aspx.designer.cs">
+      <DependentUpon>order-need-to-get-label.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\receive-address.aspx.cs">
+      <DependentUpon>receive-address.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\receive-address.aspx.designer.cs">
+      <DependentUpon>receive-address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-frame\send-address.aspx.cs">
+      <DependentUpon>send-address.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-frame\send-address.aspx.designer.cs">
+      <DependentUpon>send-address.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\user-login.aspx.cs">
+      <DependentUpon>user-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\user-login.aspx.designer.cs">
+      <DependentUpon>user-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="views\what-is-prepay.aspx.cs">
+      <DependentUpon>what-is-prepay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="views\what-is-prepay.aspx.designer.cs">
+      <DependentUpon>what-is-prepay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService\IWMOrderService.cs" />
+    <Compile Include="WebService\WMOrderService.svc.cs">
+      <DependentUpon>WMOrderService.svc</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage\reception-stage\batch.Master" />
+    <Content Include="MasterPage\reception-stage\home.Master" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="script\cookie\.jshintrc" />
+    <None Include="script\cookie\.tm_properties" />
+    <None Include="script\cookie\.travis.yml" />
+    <None Include="script\cookie\bower.json" />
+    <None Include="script\cookie\CHANGELOG.md" />
+    <None Include="script\cookie\component.json" />
+    <None Include="script\cookie\CONTRIBUTING.md" />
+    <None Include="script\cookie\cookie.jquery.json" />
+    <None Include="script\cookie\package.json" />
+    <None Include="script\cookie\README.md" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.editorconfig" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.jscsrc" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.jshintignore" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.jshintrc" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\.travis.yml" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\bower.json" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\changelog.md" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\CONTRIBUTING.md" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\fonts\Anorexia.ttf" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\images\image.php" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\image_req.php" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\index.php" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\newsession.php" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\process.php" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\demo\captcha\rand.php" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\package.json" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\README.md" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\test\.jshintrc" />
+    <None Include="script\jquery-validation-1.13.0\jquery-validation-1.13.0\validation.jquery.json" />
+    <None Include="Service References\LabelTest1\item.wsdl" />
+    <None Include="Service References\LabelTest1\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LabelTest1\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LabelTest1\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LabelTest1\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LabelTest1\LabellingWebService.wsdl" />
+    <None Include="Service References\LabelTest1\WM_Project.LabelTest1.ResponseShipment.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="stylesheets\bootstrap-ie7-master\bower.json" />
+    <None Include="stylesheets\bootstrap-ie7-master\LICENSE" />
+    <None Include="stylesheets\bootstrap-ie7-master\README.md" />
+    <None Include="views\excel-template\AUTEMS.xls" />
+    <None Include="views\pdf\.pdf" />
+    <None Include="views\pdf\all_orders.pdf" />
+    <None Include="views\pdf\AU-20141223230420-2757542.pdf" />
+    <None Include="views\pdf\AU-20141223234928-6240782.pdf" />
+    <None Include="views\pdf\AU-20141224232051-9457052.pdf" />
+    <None Include="views\pdf\AU-20141225193653-5583302.pdf" />
+    <None Include="views\pdf\AU-20141225224122-8099052.pdf" />
+    <None Include="views\pdf\AU-20141225233757-2954172.pdf" />
+    <None Include="views\pdf\AU-20141225233901-3574882.pdf" />
+    <None Include="views\pdf\test.pdf" />
+    <None Include="views\pdf\wm0001000.pdf" />
+    <None Include="views\pdf\wm0001010.pdf" />
+    <None Include="views\pdf\wm0001011.pdf" />
+    <None Include="views\pdf\wm120012.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="manage-system\ems-file\ems-order-no\" />
+    <Folder Include="manage-system\ems-file\ems-track-file\" />
+    <Folder Include="Module\" />
+    <Folder Include="views\online-help\" />
+    <Folder Include="views\pdf\local\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BarcodeService\" />
+    <WCFMetadataStorage Include="Service References\LabelTest1\" />
+    <WCFMetadataStorage Include="Service References\ShipServiceForApp\" />
+    <WCFMetadataStorage Include="Service References\ShipService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57634</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

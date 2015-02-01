@@ -1,0 +1,353 @@
+﻿body
+{
+    margin:0px;
+    padding:0px;
+    background:#dadada;
+    color:#444;
+    line-height:1.2em;   
+    font-family: '\5FAE\8F6F\96C5\9ED1', Arial, Verdana, sans-serif;
+    font-size:1em;
+}
+div.milkbody
+{
+    width: 800px;
+    height: 420px;
+    margin: 0px 112px 25px 132px;
+}
+ .content
+{
+    padding:10px; 
+}
+ .int-results-box-header
+{
+    width: 959px;
+    background: #ffc423;
+    font-family: '\5FAE\8F6F\96C5\9ED1' , Arial, Helvetica, sans-serif;
+    padding: 0px 10px;
+    height: 45px;
+    color: #373737;
+    line-height: 40px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: normal;
+    border-bottom-color: #dadada;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    text-align: left;
+}
+.int-results-box-wrapper-unlimit {
+   width: 959px;
+   background-image: url(../wsshimages/Int-Quote-box-result-box-bg.gif);
+   background-repeat: repeat-y;
+}
+
+ .wb-main-container
+ {
+     width: 792px;
+     margin-left: auto;
+     margin-right: auto;
+  }
+  
+.wb-fl
+{
+    float: left;
+}
+.wb-inlineBlock
+{
+    display: inline-block;
+}
+.luggagePic
+{
+    width: 235px;
+    height: 235px;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    margin-left: 18px;
+}
+
+#luggageBoxControl_page
+{
+   background-color: #fff3d2;
+   float: right;
+   font-size: 17px;
+   height: 110px;
+   line-height: 34px;
+   padding: 5px 20px;
+   width: 479px;
+   margin: 0px 0px 50px 0px;
+   margin-top: 36px;
+}
+#luggagebox_price
+{
+   width: 100%;
+}
+        
+#luggagebox_price table
+{
+   margin-top: 78px;
+   width: 100%;
+}
+        
+#luggagebox_price table tr:first-child
+{
+   background-color: #007dc3;
+   color: white;
+}
+        
+#luggagebox_price table tr
+{
+  background-color: #fff;
+}
+#luggagebox_price td
+{
+ width: 9.09%;
+ border: solid 1px #007dc3;
+ text-align: center;
+}
+#luggageBox_desc
+{
+ margin-top: 50px;
+}
+.int-results-box-wrapper {
+width: 959px;
+background-image: url(../wsshimages/Int-Quote-box-result-box-bg.gif);
+background-repeat: repeat-y;
+}
+
+.int-results-hero-logo-box {
+float: left;
+height: 90px;
+width: 120px;
+padding-top: 15px;
+padding-left: 25px;
+}
+
+.int-results-details-wrapper {
+width: 804px;
+float: left;
+padding-top: 5px;
+padding-bottom: 10px;
+}
+
+.int-results-details-wrapper {
+width: 804px;
+float: left;
+padding-top: 5px;
+padding-bottom: 10px;
+}
+
+#luggageWMSG {
+background-color: #fffbcc;
+border: 2px solid #ed1c24;
+color: red;
+font-size: 16px;
+line-height: 24px;
+margin-top: 25px;
+padding: 10px 16px 16px 16px;
+}
+
+#luggageWMSG_head {
+text-align: center;
+margin-bottom: 4px;
+}
+
+#luggageWMSG_body {
+font-size: 14px;
+}
+
+.int-results-Service-Name {
+float: left;
+font-family: '\5FAE\8F6F\96C5\9ED1', Arial, Helvetica, sans-serif;
+color: #5c5c5c;
+font-size: 16px;
+padding-top: 0px;
+margin-top: 20px;
+width: 400px;
+}
+.int-results-Price-Box-Product {
+   background-image: url("../wsshimages/Int-Quote-Price-Box.gif");
+   background-repeat: no-repeat;
+   color: #067DC1;
+   float: left;
+   font-family: '\5FAE\8F6F\96C5\9ED1', Arial,Helvetica,sans-serif;
+   font-size: 15px;
+   font-weight: bold;
+   height: 39px;
+   margin-top: 7px;
+   margin-bottom: 7px;
+   margin-left:10px;
+   padding-left: 10px;
+   padding-top: 9px;
+   text-align: left;
+   width: 175px;
+}
+
+.international-qq-results-2nd-line-text {
+font-size: 12px;
+font-weight: normal;
+}
+
+.international-qq-results-warning-msg {
+color: rgb(255, 0, 0);
+font-size: 11px;
+font-weight: normal;
+}
+
+.int-results-Price-Box {
+background-image: url("../wsshimages/Int-Quote-Price-Box.gif");
+background-repeat: no-repeat;
+color: #067DC1;
+float: left;
+font-family: '\5FAE\8F6F\96C5\9ED1', Arial,Helvetica,sans-serif;
+font-size: 15px;
+font-weight: bold;
+height: 39px;
+margin-top: 14px;
+padding-left: 10px;
+padding-top: 9px;
+text-align: left;
+width: 195px;
+}
+
+.int-results-Buy-Box {
+background-repeat: no-repeat;
+float: left;
+height: 45px;
+margin-left: 5px;
+margin-top: 12px;
+padding-top: 0;
+width: 174px;
+}
+
+.int-results-Printer-Required {
+padding-top: 0px;
+height: 24px;
+background-repeat: no-repeat;
+}
+
+.international-qq-results-vat {
+font-size: 14px;
+}
+ 
+div.box_small.roundedbox.milk {
+   width: 957px;
+   height: 170px;
+   background-image: none;
+   background-color: #ffffff;
+}
+        
+.box_small 
+{
+   background: url("../wsshimages/smallgray.gif") repeat-y 0px 0px;
+   margin: 0px auto 10px;
+   width: 250px;
+   overflow: hidden;
+}
+.roundedbox 
+{
+   border: 1px solid rgb(234, 234, 234);
+   overflow: hidden;
+}
+        
+.milkImage 
+{
+   float: left;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+.milkImage img 
+{
+   width: 120px;
+   height: 120px;
+   height: auto !important;
+   margin: 0 15px 0 -5px;
+   max-width: 120px !important;
+   width: 120px;
+   padding-top: 5px;
+} 
+div.milkLabel 
+{
+   margin-top: 10px;
+   width: 480px;
+   height: 42px;
+   float: left;
+}
+p.milkLabelLBL 
+{
+   margin-top: 0px;
+   margin-bottom: 4px;
+   margin-left: -5px;
+   padding: 8px 10px;
+   background-color: #f2f2f2;
+   width: 510px;
+}
+ p.milkLabelLBL span {
+     font-size: 16px;
+     font-weight: bold;
+     font-family: 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', Arial, Verdana, sans-serif;
+ }
+ p.milkLabelDEC {
+     color: #2c749d;
+     font-size: 13px;
+     margin-top: 5px;
+     margin-left: 0px;
+     width: 510px;
+ }
+ 
+ div.milkNumber {
+     float: right;
+     margin: 20px;
+     width: 201px;
+     height: 91px;
+     font-size: 15px;
+ }
+ 
+div.milkNumberdesc {
+   display: inline;
+   float: right;
+   width: 100px;
+   height:91px;
+   margin-right: -30px;
+   margin-left: 20px;
+ }
+ .selectItemMilk
+ {
+     width:100px;
+     height:27px;   
+  }
+ .milkPrice 
+{
+    width:111px;
+    height:83px;
+    display: inline;
+    float: right;
+}
+
+div.milkPrice p.checkPrice 
+{
+    margin-top:10px;    
+}
+
+.milkState {
+    position: absolute;
+    margin-top: 70px;
+    font-size: 14px;
+    color: red;
+    margin-left: -73px;
+}
+
+div.nextLabel {
+    margin: 20px;
+    width: 960px;
+    font-size: 14px;
+}
+
+input.milkOrderNext {
+   width: 115px;
+   height: 30px;
+   background-color: #007DC3;
+   color: #ffffff;
+   float: right;
+   margin-right: 40px;
+   margin-top: -5px;
+ }

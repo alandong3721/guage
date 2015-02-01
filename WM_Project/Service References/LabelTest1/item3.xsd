@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://postnl.nl/cif/services/LabellingWebService/" elementFormDefault="qualified" targetNamespace="http://postnl.nl/cif/services/LabellingWebService/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://testservice.postnl.com/CIF_SB/LabellingWebService/1_6/?wsdl&amp;xsd=LabellingWebService_1.xsd" namespace="http://postnl.nl/cif/domain/LabellingWebService/" />
+  <xs:element xmlns:q1="http://postnl.nl/cif/domain/LabellingWebService/" name="GenerateLabel" nillable="true" type="q1:GenerateLabelRequest" />
+  <xs:element xmlns:q2="http://postnl.nl/cif/domain/LabellingWebService/" name="ResponseShipment" nillable="true" type="q2:ResponseShipment" />
+</xs:schema>

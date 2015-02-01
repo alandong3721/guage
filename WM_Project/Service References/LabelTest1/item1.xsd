@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://postnl.nl/cif/services/common/" elementFormDefault="qualified" targetNamespace="http://postnl.nl/cif/services/common/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CifException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ArrayOfExceptionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CifException" nillable="true" type="tns:CifException" />
+  <xs:complexType name="ArrayOfExceptionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExceptionData" nillable="true" type="tns:ExceptionData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExceptionData" nillable="true" type="tns:ArrayOfExceptionData" />
+  <xs:complexType name="ExceptionData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExceptionData" nillable="true" type="tns:ExceptionData" />
+</xs:schema>

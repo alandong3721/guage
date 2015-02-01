@@ -1,0 +1,411 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="home.master.cs" Inherits="WM_Project.MasterPage.reception_stage.home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>WM-Express</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link type="text/css" rel="stylesheet" href="<%=ResolveClientUrl("~/stylesheets/bootstrap.css") %>" />
+    <link type="text/css" rel="stylesheet" href="<%=ResolveClientUrl("~/stylesheets/bootstrap-theme.css") %>" />
+    <style type="text/css" rel="stylesheet">
+        .jumbotron
+        {
+            height: 200px;
+            background-image: url(<%=ResolveClientUrl("~/image/image/wm-head-title.jpg") %>);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            padding: 0px;
+            margin: 0px;
+        }
+        .jumbotron form div
+        {
+            width: 16cm;
+        }
+        .menu li
+        {
+            width: 3cm;
+            text-align: center;
+        }
+        .head span
+        {
+            color: #111111;
+        }
+        body
+        {
+            width: 1040px;
+            margin: 0 auto;
+            background-color: #e1e2e2;
+            background-image: url(<%=ResolveClientUrl("~/image/image/body-background.png") %>);
+        }
+        .footer
+        {
+            background-color: #201f1f;
+            padding-top: 1cm;
+            color: white;
+        }
+        .footer-bottom
+        {
+            text-align: center;
+            background-color: white;
+            padding-top: 10px;
+            padding-bottom: 2px;
+            color: black;
+            width: 100%;
+        }
+        .footer-top
+        {
+            padding-left: 1.5cm;
+        }
+        .footer-top ul a
+        {
+            color: white;
+        }
+        .change-cursor
+        {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=5&amp;fs=4&amp;bgcolor=Green"></script>
+    <div class="head">
+        <nav class="navbar " role="navigation" style="margin: 0px; background: #FFFFFF;">
+				<div class="navbar-header" >
+					<a class="navbar-brand" href="#" style="color: #111111">WM Express华盟快递</a>
+				</div>
+				<div class="pull-right">
+					<ul class="nav navbar-nav" id="header" >
+                        
+						<li class="active">
+							<a href="<%=ResolveClientUrl("~/views/user-login.aspx") %>"><span class="glyphicon glyphicon-home">&nbsp;登录</span></a>
+						</li>
+						<li>
+							<a  href="<%=ResolveClientUrl("~/views/regist.aspx") %>"><span class="glyphicon glyphicon-list">&nbsp;注册</span></a>
+						</li>
+						
+						<li>
+							<a  href="<%=ResolveClientUrl("~/views/my-account.aspx") %>"><span class="glyphicon glyphicon-heart">&nbsp;我的账户</span></a>
+						</li>
+                        <li >
+                            <a href="<%=ResolveClientUrl("~/views/my-goods.aspx") %>"><span class="glyphicon glyphicon-list">&nbsp;我的商品</span></a>
+						</li>
+                        <li >
+                            <a href="<%=ResolveClientUrl("~/views/my-shopping-cart.aspx") %>"><span class="glyphicon glyphicon-list">&nbsp;我的购物车</span></a>
+						</li>
+						<li>
+							<a href="<%=ResolveClientUrl("~/views/order-tracking.aspx") %>"><span class="glyphicon glyphicon-heart">&nbsp;订单追踪</span></a>
+						</li>
+						<li style="padding-top:8px;padding-right:10px">
+							<asp:Button ID="btn_safe_exit" runat="Server" Text="安全退出" 
+                                CssClass="btn btn-info" onclick="btn_safe_exit_Click" />
+						</li>
+					</ul>
+				</div>
+		 </nav>
+    </div>
+    <div style="height: 1px; background: #DADADA">
+    </div>
+    <div class="jumbotron row">
+        <p style="text-align:right;padding-top:2px;color:#3C85C4; font-size:15px"><asp:Label ID="lb_user_name"  runat="Server" ForeColor="#3C85C4"></asp:Label></p>
+    </div>
+    <div class="container menu" style="padding: 0px; margin: 0px; width: 100%">
+        <nav class="navbar navbar-inverse " role="navigation" style="margin: 0px; padding: 0px">
+		      <div >
+					<ul class="nav navbar-nav" >
+						<li class="active">
+							<a href="<%=ResolveClientUrl("~/index.aspx") %>">首页</a>
+						</li>
+						
+                        <li class="dropdown">
+	                        <a class="dropdown-toggle" id="dropdownMenu_one"  data-toggle="dropdown">国际快递&nbsp;&nbsp;<span class="caret"></span></a>
+						    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="background:#3A83C2;">
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/ems-direct.aspx") %>">华盟EMS专线</a>
+							      </li>
+                                  
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/parcelforce-economy.aspx") %>">ParcelForce Economy</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/parcelforce-priority.aspx") %>">ParcelForce Priority</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/postnl.aspx") %>">荷兰邮政优先包</a>
+							      </li>
+						   </ul>
+						</li>
+
+
+                        <li class="dropdown">
+	                        <a class="dropdown-toggle" id="usefultool"  data-toggle="dropdown">下单工具&nbsp;&nbsp;<span class="caret"></span></a>
+						    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="background:#3A83C2;">
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/simple-batch-order.aspx") %>" >同一发件地址不同服务闪电出单</a>
+							      </li>
+                                  
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/batch-order.aspx") %>" >多个发件地址不同服务闪电出单</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/batch-import.aspx") %>">Excel表格批量上传出单</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/inter-express/local-order-pick-up.aspx") %>">快速本地取件下单</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+						   </ul>
+						</li>
+                        <li class="dropdown">
+	                        <a class="dropdown-toggle" id="dropdownMenu_two"  data-toggle="dropdown">海淘转运&nbsp;&nbsp;<span class="caret"></span></a>
+						    <ul class="dropdown-menu"  role="menu" aria-labelledby="dropdownMenu1" style="background:#3A83C2;">
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/sea-transport/uk-shopping-guide.aspx") %>" >英国购物指南</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="#">开始海淘转运</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="#">我的转运订单</a>
+							      </li>
+                                  <%--<li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="#">海淘转运下单流程</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="#">收费标准和附加服务</a>
+							      </li>--%>
+						   </ul>
+						</li>
+						
+						
+						<%--<li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" id="dropdownMenu_three"  data-toggle="dropdown">活动专区&nbsp;&nbsp;<span class="caret"></span></a>
+						    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="background:#3A83C2;">
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/activity-area/ally-plan.aspx") %>" >盟友计划</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+							      <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/activity-area/custom-point.aspx") %>">客户积分</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/activity-area/free-delivery-for-first.aspx") %>">首包裹免费寄</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/activity-area/custom-red-packet.aspx") %>">客户红包</a>
+							      </li>
+
+                                  
+						   </ul>
+						</li>--%>
+
+                        <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" id="dropdownMenu_four"  data-toggle="dropdown">网上商城&nbsp;&nbsp;<span class="caret"></span></a>
+						    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" style="background:#3A83C2;">
+							      
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/online-shopping/supply-check-out.aspx") %>">包装材料</a>
+							      </li>
+                                  <li style="width:100%;height:1px;background:#FFFFFF"></li>
+                                  <li role="presentation" style="width:100%;text-align:left">
+							         <a role="menuitem" tabindex="-1" href="<%=ResolveClientUrl("~/views/online-shopping/luggage-box.aspx") %>">行李纸箱</a>
+							      </li>
+						   </ul>
+						</li>
+						<li><a href="<%=ResolveClientUrl("~/views/contact-us.aspx") %>">联系我们</a>
+			            </li>
+
+                        <li>
+							<a href="<%=ResolveClientUrl("~/views/package-advice.aspx") %>">客户须知</a> 
+						</li>
+
+                        <li>
+							<a href="<%=ResolveClientUrl("~/views/frequent-ask-question.aspx") %>">常见问题</a>
+						</li>
+					</ul>
+			</div>
+	  	  </nav>
+    </div>
+    <div class="body container" style="background: #FFFFFF; width: 100%;">
+        <div class="row" style="padding-top: 20px;">
+            <div class="col-md-8" style="width: 640px; margin-right: 30px; margin-left: 30px">
+                <asp:ContentPlaceHolder ID="center_right" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="col-md-4" style="width: 310px; margin-right: 30px" id="advertisement">
+                <div class="row  panel panel-info" style="margin-bottom: 20px; height: 100px; border:1px solid #3C85C4; background-image: url(<%=ResolveClientUrl("~/image/image/track-your-parcel.gif") %>)">
+                    <input type="text" name="txt_fast_track_no" id="txt_fast_track_no" class="form-control"
+                        style="height: 25px; width: 210px; margin-left: 16px; margin-top: 58px; float: left" />
+                    <asp:ImageButton ImageUrl="../../image/image/track-your-parcel-button.gif" runat="Server"
+                        ID="img_btn_track" OnClientClick="return isTrackNoNull()" OnClick="img_btn_track_Click"
+                        Style="margin-left: 16px; margin-top: 58px" />
+                </div>
+                <div class="row" style="margin-bottom: 20px">
+                    <div class="panel panel-primary" style="margin: 0px;">
+                        <div class="panel-heading">
+                            <p class="glyphicon glyphicon-user">
+                                &nbsp;账户信息</p>
+                        </div>
+                        <div class="panel-body">
+                            <div class="form-group" id="before_login" runat="Server">
+                                <div class="col-md-4">
+                                    <a href="<%=ResolveClientUrl("~/views/user-login.aspx") %>" style="text-decoration: none; width: 100%" class=" btn btn-info">
+                                        登陆</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="<%=ResolveClientUrl("~/views/regist.aspx") %>" style="text-decoration: none; width: 100%" class=" btn btn-info">
+                                        注册</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="<%=ResolveClientUrl("~/views/reset-password.aspx") %>" style="text-decoration: none; width: 100%;
+                                        padding-left: 0; padding-right: 0;" class=" btn btn-info">忘记密码</a>
+                                </div>
+                            </div>
+                            <div id="after_login" runat="Server">
+                                <div class="form-group" style="height: 30px; margin-top: 10px">
+                                    <label class="col-md-5">
+                                        账户余额:&pound;</label>
+                                    <asp:Label CssClass="col-md-7" ID="lb_account_balance" runat="Server" Style="text-align: left;
+                                        padding-left: 0px"></asp:Label>
+                                </div>
+                                <div class="form-group" style="height: 30px">
+                                    <a href="<%=ResolveClientUrl("~/views/my-account.aspx") %>" style="text-decoration: none" class="col-md-4 btn btn-info">
+                                        我的账户</a>
+                                    <asp:Button ID="exit_security" class="col-md-4 col-md-offset-4 btn btn-info" runat="Server"
+                                        Text="安全退出" OnClick="exit_security_Click" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row" style="margin-bottom: 20px">
+                    <img class="panel panel-info" style="border:1px solid #3C85C4" src="<%=ResolveClientUrl("~/image/image/wechat.jpg") %>" width="100%" alt="请关注我们，我们的微信号是：WM-Express" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container" style="padding-bottom: 1cm;">
+            <div class="row footer-top">
+                <div class="col-md-2 col-md-offset-1">
+                    <h4>
+                        用户部分</h4>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li style="margin-top: 5px"><a href="<%=ResolveClientUrl("~/views/regist.aspx") %>"><span class="glyphicon glyphicon-envelop">
+                            用户注册</span></a></li>
+                        <li style="margin-top: 5px"><a href="<%=ResolveClientUrl("~/views/what-is-prepay.aspx") %>"><span class="glyphicon glyphicon-envelop">
+                            账户充值</span></a></li>
+                        <li style="margin-top: 5px"><a href="<%=ResolveClientUrl("~/views/online-quote.aspx") %>"><span class="glyphicon glyphicon-envelop">
+                            网上报价</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <h4>
+                        Title2</h4>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item1</span></a></li>
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item2</span></a></li>
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item3</span></a></li>
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item4</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <h4>
+                        Title3</h4>
+                    <hr />
+                    <ul class="list-unstyled">
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item1</span></a></li>
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item2</span></a></li>
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item3</span></a></li>
+                        <li style="margin-top: 5px"><a><span class="glyphicon glyphicon-envelop">item4</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                ©2014 The company of WM-GLOBAL.All Rights Reserved.</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/javascripts/jquery-1.11.1.js") %>"></script>
+    <script type="text/javascript" src="<%=ResolveClientUrl("~/javascripts/bootstrap.js") %>"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            $("#track-package").focus(function () {
+                $("#track").css('opacity', '1');
+            }).blur(function () {
+                $("#track").css('opacity', '0.5');
+            });
+
+            $(".footer li").hover(function () {
+                $(this).addClass('change-cursor');
+            }, function () {
+                $(this).removeClass('change-cursor');
+            });
+            $(".menu li").click(function () {
+                $(".menu li").removeClass('active');
+                $(this).addClass('active');
+            });
+
+            /*快速登录*/
+            $("#fast_login1").click(function () {
+                window.location = "<%=ResolveClientUrl("~/views/user-login.aspx") %>";
+            });
+
+            /**快速注册**/
+            $("#fast_regist1").click(function () {
+                window.open("<%=ResolveClientUrl("~/views/regist.aspx") %>");
+            });
+            /**忘记密码**/
+            $("#forget_password1").click(function () {
+
+            });
+
+            /*我的账户*/
+            $("#my_accout1").click(
+                function () {
+                    window.open('<%=ResolveClientUrl("~/views/my-account.aspx") %>');
+                }
+            );
+        });
+        </script>
+    <%--javascript代码--%>
+    <script type="text/javascript">
+
+        function isTrackNoNull() {
+
+            var track_no = document.getElementById("txt_fast_track_no").value;
+            if (track_no == "") {
+                alert("订单号不能为空！");
+                return false;
+            }
+
+            return true;
+        }
+
+    </script>
+    </form>
+</body>
+</html>

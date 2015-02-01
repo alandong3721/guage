@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://postnl.nl/cif/services/LabellingWebService/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://postnl.nl/cif/services/LabellingWebService/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://postnl.nl/cif/services/LabellingWebService/Imports">
+      <xsd:import schemaLocation="https://testservice.postnl.com/CIF_SB/LabellingWebService/1_6/?wsdl&amp;xsd=LabellingWebService.xsd" namespace="http://postnl.nl/cif/services/LabellingWebService/" />
+      <xsd:import schemaLocation="https://testservice.postnl.com/CIF_SB/LabellingWebService/1_6/?wsdl&amp;xsd=LabellingWebService_1_2.xsd" namespace="http://postnl.nl/cif/services/common/" />
+      <xsd:import schemaLocation="https://testservice.postnl.com/CIF_SB/LabellingWebService/1_6/?wsdl&amp;xsd=LabellingWebService_1_2_3.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://testservice.postnl.com/CIF_SB/LabellingWebService/1_6/?wsdl&amp;xsd=LabellingWebService_1.xsd" namespace="http://postnl.nl/cif/domain/LabellingWebService/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GenerateLabelRequestContract">
+    <wsdl:part name="GenerateLabel" element="tns:GenerateLabel" />
+  </wsdl:message>
+  <wsdl:message name="GenerateLabelResponseContract">
+    <wsdl:part name="ResponseShipment" element="tns:ResponseShipment" />
+  </wsdl:message>
+  <wsdl:message name="ILabellingWebService_GenerateLabel_CifExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://postnl.nl/cif/services/common/" name="detail" element="q1:CifException" />
+  </wsdl:message>
+  <wsdl:message name="ILabellingWebService_GenerateLabelWithoutConfirm_CifExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://postnl.nl/cif/services/common/" name="detail" element="q2:CifException" />
+  </wsdl:message>
+  <wsdl:portType name="ILabellingWebService">
+    <wsdl:operation name="GenerateLabel">
+      <wsdl:input wsaw:Action="http://postnl.nl/cif/services/LabellingWebService/ILabellingWebService/GenerateLabel" name="GenerateLabelRequestContract" message="tns:GenerateLabelRequestContract" />
+      <wsdl:output wsaw:Action="http://postnl.nl/cif/services/LabellingWebService/ILabellingWebService/GenerateLabelResponse" name="GenerateLabelResponseContract" message="tns:GenerateLabelResponseContract" />
+      <wsdl:fault wsaw:Action="http://postnl.nl/cif/services/LabellingWebService/ILabellingWebService/GenerateLabelCifExceptionFault" name="CifExceptionFault" message="tns:ILabellingWebService_GenerateLabel_CifExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateLabelWithoutConfirm">
+      <wsdl:input wsaw:Action="http://postnl.nl/cif/services/LabellingWebService/ILabellingWebService/GenerateLabelWithoutConfirm" name="GenerateLabelRequestContract" message="tns:GenerateLabelRequestContract" />
+      <wsdl:output wsaw:Action="http://postnl.nl/cif/services/LabellingWebService/ILabellingWebService/GenerateLabelWithoutConfirmResponse" name="GenerateLabelResponseContract" message="tns:GenerateLabelResponseContract" />
+      <wsdl:fault wsaw:Action="http://postnl.nl/cif/services/LabellingWebService/ILabellingWebService/GenerateLabelWithoutConfirmCifExceptionFault" name="CifExceptionFault" message="tns:ILabellingWebService_GenerateLabelWithoutConfirm_CifExceptionFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

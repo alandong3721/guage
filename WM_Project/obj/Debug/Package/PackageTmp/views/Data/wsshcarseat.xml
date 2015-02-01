@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<carseats>
+  <carseat>
+    <id>101</id>
+    <image>../wsshimages/Product_image_list_1001.png</image>
+    <label>
+      百代适头等舱-黑色闪电系列 0-4岁(Britax First Class Plus Car Seat - Black Thunder)
+    </label>
+    <desc>
+      英国Britax宝得适集团公司自1960年代开始生产设计汽车儿童安全座椅。每年均有多种新型号安全产品全球同步推出并屡获欧美儿童产品大奖。百代适产品作为原厂配置的儿童安全座椅.
+      EURONCAP(欧盟新型车安全测试)中, 多次获得四星级评分是众多明星给宝宝首选的顶级汽车安全座椅产品
+    </desc>
+    <price_e>
+      99.99
+    </price_e>
+    <price_c>
+      974.31
+    </price_c>
+  </carseat>
+  <carseat>
+    <id>102</id>
+    <image>../wsshimages/Product_image_list_1002.png</image>
+    <label>
+      百代适头等舱-辣椒红系列 0-4岁(Britax First Class Plus Car Seat - Chili Pepper)
+    </label>
+    <desc>
+      英国Britax宝得适集团公司自1960年代开始生产设计汽车儿童安全座椅。每年均有多种新型号安全产品全球同步推出并屡获欧美儿童产品大奖。百代适产品作为原厂配置的儿童安全座椅.
+      EURONCAP(欧盟新型车安全测试)中, 多次获得四星级评分是众多明星给宝宝首选的顶级汽车安全座椅产品
+    </desc>
+    <price_e>
+      119.99
+    </price_e>
+    <price_c>
+      1,169.19
+    </price_c>
+  </carseat>
+  <carseat>
+    <id>103</id>
+    <image>../wsshimages/Product_image_list_1003.png</image>
+    <label>
+      百代适头等舱-紫葡萄系列 0-4岁(Britax First Class Plus Car Seat - Dark Grape)
+    </label>
+    <desc>
+      英国Britax宝得适集团公司自1960年代开始生产设计汽车儿童安全座椅。每年均有多种新型号安全产品全球同步推出并屡获欧美儿童产品大奖。百代适产品作为原厂配置的儿童安全座椅.
+      EURONCAP(欧盟新型车安全测试)中, 多次获得四星级评分是众多明星给宝宝首选的顶级汽车安全座椅产品
+    </desc>
+    <price_e>
+      159.99
+    </price_e>
+    <price_c>
+      1558.96
+    </price_c>
+  </carseat>
+  <carseat>
+    <id>104</id>
+    <image>../wsshimages/Product_image_list_1004.png</image>
+    <label>
+      百代适头等舱-机灵小斑马系列 0-4岁(Britax First Class Plus Car Seat - Smart Zebra)
+    </label>
+    <desc>
+      英国Britax宝得适集团公司自1960年代开始生产设计汽车儿童安全座椅。每年均有多种新型号安全产品全球同步推出并屡获欧美儿童产品大奖。百代适产品作为原厂配置的儿童安全座椅.
+      EURONCAP(欧盟新型车安全测试)中, 多次获得四星级评分是众多明星给宝宝首选的顶级汽车安全座椅产品
+    </desc>
+    <price_e>
+      149.99
+    </price_e>
+    <price_c>
+      1461.52
+    </price_c>
+  </carseat>
+  <carseat>
+    <id>105</id>
+    <image>../wsshimages/Product_image_list_1005.jpg</image>
+    <label>
+      百代适百变王123-黑色闪电系列 9Month-14Year (Britax Evolva Car Seat - Black Thunder)
+    </label>
+    <desc>
+      英国Britax宝得适集团公司自1960年代开始生产设计汽车儿童安全座椅。每年均有多种新型号安全产品全球同步推出并屡获欧美儿童产品大奖。百代适产品作为原厂配置的儿童安全座椅.
+      EURONCAP(欧盟新型车安全测试)中, 多次获得四星级评分是众多明星给宝宝首选的顶级汽车安全座椅产品
+    </desc>
+    <price_e>
+      99.99
+    </price_e>
+    <price_c>
+      974.31
+    </price_c>
+  </carseat>
+  <carseat>
+    <id>106</id>
+    <image>../wsshimages/Product_image_list_1006.jpg</image>
+    <label>
+      百代适百变王123 Plus-辣椒红系列9Month-14Year (Britax Evolva Car Seat Plus- Chilli Pepper)
+    </label>
+    <desc>
+      英国Britax宝得适集团公司自1960年代开始生产设计汽车儿童安全座椅。每年均有多种新型号安全产品全球同步推出并屡获欧美儿童产品大奖。百代适产品作为原厂配置的儿童安全座椅.
+      EURONCAP(欧盟新型车安全测试)中, 多次获得四星级评分是众多明星给宝宝首选的顶级汽车安全座椅产品
+    </desc>
+    <price_e>
+      119.99
+    </price_e>
+    <price_c>
+      1169.19
+    </price_c>
+  </carseat>
+</carseats>

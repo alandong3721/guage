@@ -1,0 +1,53 @@
+F:\项目正式版本\WM_Project\WM_Project\bin\WM_Project.dll
+F:\项目正式版本\WM_Project\WM_Project\bin\WM_Project.pdb
+F:\项目正式版本\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+F:\项目正式版本\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+F:\项目正式版本\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+E:\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+E:\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+E:\WM_Project\WM_Project\bin\WM_Project.dll
+E:\WM_Project\WM_Project\bin\WM_Project.pdb
+E:\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\bin\WM_Project.dll
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\bin\WM_Project.pdb
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\bin\ICSharpCode.SharpZipLib.dll
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\bin\iTextAsian.dll
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\bin\iTextAsianCmaps.dll
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\bin\itextsharp.dll
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\obj\Debug\WM_Project.dll
+C:\Users\wang\Documents\Tencent Files\1152514388\FileRecv\WM_Project(1)\WM_Project\obj\Debug\WM_Project.pdb
+F:\项目正式版本\备份\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+F:\项目正式版本\备份\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+F:\项目正式版本\备份\WM_Project\WM_Project\bin\WM_Project.dll
+F:\项目正式版本\备份\WM_Project\WM_Project\bin\WM_Project.pdb
+F:\项目正式版本\备份\WM_Project\WM_Project\bin\ICSharpCode.SharpZipLib.dll
+F:\项目正式版本\备份\WM_Project\WM_Project\bin\itextsharp.dll
+F:\项目正式版本\备份\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+F:\wm-global-express\12-27\WM_Project\WM_Project\bin\WM_Project.dll
+F:\wm-global-express\12-27\WM_Project\WM_Project\bin\WM_Project.pdb
+F:\wm-global-express\12-27\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+F:\wm-global-express\12-27\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+F:\wm-global-express\12-27\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+E:\WM_Project\WM_Project\WM_Project\bin\WM_Project.dll
+E:\WM_Project\WM_Project\WM_Project\bin\WM_Project.pdb
+E:\WM_Project\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+E:\WM_Project\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+E:\WM_Project\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+E:\WM_Project\WM_Project\WM_Project\bin\chncharinfo.dll
+F:\2015-01-24\WM_Project\WM_Project\bin\WM_Project.dll
+F:\2015-01-24\WM_Project\WM_Project\bin\WM_Project.pdb
+F:\2015-01-24\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+F:\2015-01-24\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+F:\2015-01-24\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+C:\Users\wang\Desktop\WM_Project\WM_Project\bin\WM_Project.dll
+C:\Users\wang\Desktop\WM_Project\WM_Project\bin\WM_Project.pdb
+C:\Users\wang\Desktop\WM_Project\WM_Project\bin\chncharinfo.dll
+C:\Users\wang\Desktop\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+C:\Users\wang\Desktop\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+C:\Users\wang\Desktop\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
+F:\2015-1-30\WM_Project\WM_Project\bin\WM_Project.dll
+F:\2015-1-30\WM_Project\WM_Project\bin\WM_Project.pdb
+F:\2015-1-30\WM_Project\WM_Project\obj\Debug\WM_Project.csprojResolveAssemblyReference.cache
+F:\2015-1-30\WM_Project\WM_Project\obj\Debug\WM_Project.dll
+F:\2015-1-30\WM_Project\WM_Project\obj\Debug\WM_Project.pdb
